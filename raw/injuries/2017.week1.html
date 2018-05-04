@@ -35,37 +35,49 @@
 <meta name="verify-v1" content="6NHmoSdw+zVfky31qfKXcw3oxKW3c6hqUCf7wXTYn38=" />
 <meta name="msvalidate.01" content="F4B077FDFE2E47F92AD40EFC1CF233C2" />
 <script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(["_setAccount", "UA-2649506-1"]);
+_gaq.push(["_trackPageview"]);
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-2649506-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
+(function() {
+   var ga = document.createElement("script");
+   ga.type = "text/javascript";
+   ga.async = true;
+   ga.src =
+      ("https:" == document.location.protocol ? "https://ssl" : "http://www") +
+      ".google-analytics.com/ga.js";
+   var s = document.getElementsByTagName("script")[0];
+   s.parentNode.insertBefore(ga, s);
+})();
 </script>
 <!-- Header Tag Code -->
 <script data-cfasync='false' type='text/javascript'>/*<![CDATA[*/(function (a, c, s, u){'Insticator'in a || (a.Insticator={ad:{loadAd: function (b){Insticator.ad.q.push(b)}, q: []}, helper:{}, embed:{}, version: "3.0", q: [], load: function (t, o){Insticator.q.push({t: t, o: o})}}); var b=c.createElement(s); b.src=u; b.async=!0; var d=c.getElementsByTagName(s)[0]; d.parentNode.insertBefore(b, d)})(window, document, 'script', '//d2na2p72vtqyok.cloudfront.net/client-embed/a630a0aa-ba8f-49bc-9381-49a678487e92.js');/*]]>*/</script>
 <!-- End Header Tag Code -->
 
 <script data-cfasync="false" type="text/javascript">
-  var freestar = freestar || {};
-  freestar.hitTime = Date.now();
-  freestar.queue = freestar.queue || [];
-  freestar.config = freestar.config || {};
-  freestar.debug = window.location.search.indexOf('fsdebug') === -1 ? false : true;
+var freestar = freestar || {};
+freestar.hitTime = Date.now();
+freestar.queue = freestar.queue || [];
+freestar.config = freestar.config || {};
+freestar.debug =
+   window.location.search.indexOf("fsdebug") === -1 ? false : true;
 
-  // Tag IDs set here, must match Tags served in the Body for proper setup
-  freestar.config.enabled_slots = [
-    "footballdb_300x250_300x600_320x50_Sidebar_2",
-    "footballdb_300x250_300x600_320x50_Sidebar_1",
-    "footballdb_728x90_320x50_320x100_ATF",
-  ];
+// Tag IDs set here, must match Tags served in the Body for proper setup
+freestar.config.enabled_slots = [
+   "footballdb_300x250_300x600_320x50_Sidebar_2",
+   "footballdb_300x250_300x600_320x50_Sidebar_1",
+   "footballdb_728x90_320x50_320x100_ATF"
+];
 
-  !function(a,b){var c=b.getElementsByTagName("script")[0],d=b.createElement("script"),e="https://a.pub.network/footballdb-com";e+=freestar.debug?"/qa/pubfig.min.js":"/pubfig.min.js",d.async=!0,d.src=e,c.parentNode.insertBefore(d,c)}(window,document);
+!(function(a, b) {
+   var c = b.getElementsByTagName("script")[0],
+      d = b.createElement("script"),
+      e = "https://a.pub.network/footballdb-com";
+   (e += freestar.debug ? "/qa/pubfig.min.js" : "/pubfig.min.js"),
+      (d.async = !0),
+      (d.src = e),
+      c.parentNode.insertBefore(d, c);
+})(window, document);
 </script>
 </head>
 <body>
@@ -282,7 +294,9 @@
 <center>
 <div align="center" id="footballdb_728x90_320x50_320x100_ATF">
 <script data-cfasync="false" type="text/javascript">
- freestar.queue.push(function () { googletag.display('footballdb_728x90_320x50_320x100_ATF'); });
+freestar.queue.push(function() {
+   googletag.display("footballdb_728x90_320x50_320x100_ATF");
+});
 </script>
 </div>
 </center>
@@ -1149,28 +1163,47 @@ Blank fields mean no information is available.<p />
 </table>
 <p />
 <script>
-
- $(function() {
-
-   $("#fldInjuriesURL").change(function(){
-     var url = $("#fldInjuriesURL").val();
-     if (url!="") { window.location = url; }
+$(function() {
+   $("#fldInjuriesURL").change(function() {
+      var url = $("#fldInjuriesURL").val();
+      if (url != "") {
+         window.location = url;
+      }
    });
-
- });
-
+});
 </script>
 
 <div id="rcjsload_7fb5c3"></div>
 <script type="text/javascript">
 (function() {
-var referer="";try{if(referer=document.referrer,"undefined"==typeof referer||""==referer)throw"undefined"}catch(exception){referer=document.location.href,(""==referer||"undefined"==typeof referer)&&(referer=document.URL)}referer=referer.substr(0,700);
-var rcel = document.createElement("script");
-rcel.id = 'rc_' + Math.floor(Math.random() * 1000);
-rcel.type = 'text/javascript';
-rcel.src = "https://trends.revcontent.com/serve.js.php?w=87643&t="+rcel.id+"&c="+(new Date()).getTime()+"&width="+(window.outerWidth || document.documentElement.clientWidth)+"&referer="+referer;
-rcel.async = true;
-var rcds = document.getElementById("rcjsload_7fb5c3"); rcds.appendChild(rcel);
+   var referer = "";
+   try {
+      if (
+         ((referer = document.referrer),
+         "undefined" == typeof referer || "" == referer)
+      )
+         throw "undefined";
+   } catch (exception) {
+      (referer = document.location.href),
+         ("" == referer || "undefined" == typeof referer) &&
+            (referer = document.URL);
+   }
+   referer = referer.substr(0, 700);
+   var rcel = document.createElement("script");
+   rcel.id = "rc_" + Math.floor(Math.random() * 1000);
+   rcel.type = "text/javascript";
+   rcel.src =
+      "https://trends.revcontent.com/serve.js.php?w=87643&t=" +
+      rcel.id +
+      "&c=" +
+      new Date().getTime() +
+      "&width=" +
+      (window.outerWidth || document.documentElement.clientWidth) +
+      "&referer=" +
+      referer;
+   rcel.async = true;
+   var rcds = document.getElementById("rcjsload_7fb5c3");
+   rcds.appendChild(rcel);
 })();
 </script>
 </div>
@@ -1178,14 +1211,18 @@ var rcds = document.getElementById("rcjsload_7fb5c3"); rcds.appendChild(rcel);
 <div class="rightcol_ad">
 <div align="center" id="footballdb_300x250_300x600_320x50_Sidebar_1">
 <script data-cfasync="false" type="text/javascript">
- freestar.queue.push(function () { googletag.display('footballdb_300x250_300x600_320x50_Sidebar_1'); });
+freestar.queue.push(function() {
+   googletag.display("footballdb_300x250_300x600_320x50_Sidebar_1");
+});
 </script>
 </div>
 </div>
 <div class="rightcol_ad">
 <div align="center" id="footballdb_300x250_300x600_320x50_Sidebar_2">
 <script data-cfasync="false" type="text/javascript">
- freestar.queue.push(function () { googletag.display('footballdb_300x250_300x600_320x50_Sidebar_2'); });
+freestar.queue.push(function() {
+   googletag.display("footballdb_300x250_300x600_320x50_Sidebar_2");
+});
 </script>
 </div>
 </div>
@@ -1212,20 +1249,18 @@ Copyright &copy; 2018 by The Football Database, LLC. All Rights Reserved.<br /><
 </div>
 
 <script type="text/javascript">
+var wto = wto || [];
+wto.push(["setWTID", "cmgtest"]);
+wto.push(["webTraxs"]);
 
-  var wto = wto || [];
-  wto.push(['setWTID', 'cmgtest']);
-  wto.push(['webTraxs']);
-
-  (function() {
-    var wt = document.createElement('script');
-    wt.src = document.location.protocol + '//www.webtraxs.com/wt.php';
-    wt.type = 'text/javascript';
-    wt.async = true;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wt, s);
-  })();
-
+(function() {
+   var wt = document.createElement("script");
+   wt.src = document.location.protocol + "//www.webtraxs.com/wt.php";
+   wt.type = "text/javascript";
+   wt.async = true;
+   var s = document.getElementsByTagName("script")[0];
+   s.parentNode.insertBefore(wt, s);
+})();
 </script>
 <noscript><img src="https://www.webtraxs.com/webtraxs.php?id=cmgtest&amp;st=img" alt="" /></noscript>
 </body>

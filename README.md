@@ -8,3 +8,10 @@ python3 get-boxscore-links.py
 bash get-boxscores.sh
 python3 parse-boxscores.py
 ```
+
+To get injury data:
+
+```sh
+bash get-injuries.sh
+python3 parse-injuries.py
+```

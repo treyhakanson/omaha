@@ -1,19 +1,9 @@
 import os
-import re
 from bs4 import BeautifulSoup as bs
-
+from utils import getweek, getyear
 
 LINKS_FNAME = "./raw/misc/boxscore-links.csv"
 FILE_DIR = "./raw/schedules"
-
-
-def getyear(s):
-    return int(re.match(r"(\d+)\.week\d+\.htm", s).group(1))
-
-
-def getweek(s):
-    return int(re.match(r"2017\.week(\d+)\.htm", s).group(1))
-
 
 links = open(LINKS_FNAME, "w")
 fnames = os.listdir(FILE_DIR)
