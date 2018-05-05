@@ -22,6 +22,11 @@ PASS_TCKL_TYPES = ["short_r", "short_mid", "short_l", "deep_r", "deep_mid",
                    "deep_l"]
 TCKL_ATTRS = ["tckl", "dfnd"]
 
+# Snap count information
+SNAP_COUNT_TYPES = ["off", "def", "st"]
+SNAP_COUNT_ATTRS = ["num", "pct"]
+SNAP_COUNT_PRE_COLS = ["pos"]
+
 # Final output directory information
 ROOT_DIR = "../boxscore-data"
 OUTPUT_DIRS = [
@@ -29,6 +34,7 @@ OUTPUT_DIRS = [
     "rush_dirs",
     "pass_tckls",
     "rush_tckls",
+    "snap_counts",
     "zebras",
     "penalties"
 ]
@@ -38,10 +44,18 @@ PIPELINE = {
     "TGT_DIRS": False,
     "RUSH_DIRS": False,
     "PASS_TCKLS": False,
-    "RUSH_TCKLS": True,
+    "RUSH_TCKLS": False,
+    "SNAP_COUNTS": True,
     "ZEBRAS": False,
-    "PENALTIES": False
+    "PENALTIES": False,
 }
+# if true, will only attempt to process 1 boxscore
+DEV_MODE = False
+# if false, will not attempt to output csv data
+OUTPUT = True
+# if the file has already been parsed, skip it
+SKIP_EXISTING = True  # TODO: actually implement this
+
 
 pp = PrettyPrinter(compact=True)
 output_map = {}
@@ -71,9 +85,12 @@ def soupify_comment(soup, id, el="div"):
     return bs(comment, "html.parser")
 
 
-def parse_table(soup, table_id, types=[], attrs=[]):
+def parse_table(soup, table_id, types=[], attrs=[], pre_cols=[], cast=True,
+                drop_leading=1):
     soup = soupify_comment(soup, "all_%s" % table_id)
     header = ["player_name", "player_link"]
+    for col in pre_cols:
+        header.append(col)
     if len(types) > 0:
         for type in types:
             for attr in attrs:
@@ -89,16 +106,14 @@ def parse_table(soup, table_id, types=[], attrs=[]):
         if "thead" in tr.get("class", []):
             continue
         player_name = tr.th.get_text()
-        player_link = tr.th.a["href"]  # functions as a unique identifier
-        tds = tr.find_all("td")[1:]  # drop team name
-        i = 0
-        incr = len(attrs)
+        # functions as a unique identifier
+        player_link = tr.th.a["href"]
+        tds = tr.find_all("td")[drop_leading:]
         player_res = []
-        while (i < len(tds)):
-            for j in range(incr):
-                player_res.append(tds[i + j].get_text() or "0")
-            i += incr
-        player_res = list(map(lambda x: int(x), player_res))
+        for td in tds:
+            player_res.append(td.get_text() or "0")
+        if cast:
+            player_res = list(map(lambda x: int(x), player_res))
         player_res = [player_name, player_link, *player_res]
         res.append(player_res)
     return res
@@ -136,6 +151,28 @@ def parse_penalties(soup):
     return res
 
 
+def parse_snap_counts(soup, home_team, away_team):
+    home_sc = parse_table(soup, "home_snap_counts", types=SNAP_COUNT_TYPES,
+                          attrs=SNAP_COUNT_ATTRS,
+                          pre_cols=SNAP_COUNT_PRE_COLS,
+                          cast=False,
+                          drop_leading=0)
+    away_sc = parse_table(soup, "vis_snap_counts", types=SNAP_COUNT_TYPES,
+                          attrs=SNAP_COUNT_ATTRS,
+                          pre_cols=SNAP_COUNT_PRE_COLS,
+                          cast=False,
+                          drop_leading=0)[1:]
+    header = [*home_sc[0], "team_name"]
+    home_sc = home_sc[1:]
+    for row in home_sc:
+        row[3:] = list(map(lambda x: int(x.strip("%")), row[3:]))
+        row.append(home_team)
+    for row in away_sc:
+        row[3:] = list(map(lambda x: int(x.strip("%")), row[3:]))
+        row.append(away_team)
+    return [header, *home_sc, *away_sc]
+
+
 fnames = os.listdir(FILE_DIR)
 fnames.sort(key=getweek)
 
@@ -161,6 +198,10 @@ for fname in fnames:
     if PIPELINE["RUSH_TCKLS"]:
         output_map["rush_tckls"] = parse_table(soup, "rush_tackles",
                                                attrs=RUSH_TYPES)
+    if PIPELINE["SNAP_COUNTS"]:
+        away_team, home_team = game.split(" at ")
+        output_map["snap_counts"] = parse_snap_counts(soup, home_team,
+                                                      away_team)
     if PIPELINE["ZEBRAS"]:
         output_map["zebras"] = parse_zebras(soup, game)
     if PIPELINE["PENALTIES"]:
@@ -168,9 +209,13 @@ for fname in fnames:
     res_base_fname = game.replace(" at ", "@").replace(" ", "_")
     res_fname = "%s.week%s.%s.csv" % (year, week, res_base_fname)
     for output_dir in OUTPUT_DIRS:
+        if not OUTPUT:
+            break
         if not PIPELINE[output_dir.upper()]:
             continue
         with open("%s/%s/%s" % (ROOT_DIR, output_dir, res_fname), "w") as file:
             writer = csv.writer(file)
             for row in output_map[output_dir]:
                 writer.writerow(row)
+    if DEV_MODE:
+        break
