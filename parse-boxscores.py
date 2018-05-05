@@ -2,6 +2,7 @@ import os
 import re
 from bs4 import BeautifulSoup as bs, Comment
 from pprint import PrettyPrinter
+import csv
 
 # directory containing raw, unprocessed HTML documents
 FILE_DIR = "./raw/boxscores"
@@ -21,12 +22,29 @@ PASS_TCKL_TYPES = ["short_r", "short_mid", "short_l", "deep_r", "deep_mid",
                    "deep_l"]
 TCKL_ATTRS = ["tckl", "dfnd"]
 
+# Final output directory information
+ROOT_DIR = "boxscore-data"
+OUTPUT_DIRS = [
+    "tgt_dirs",
+    "rush_dirs",
+    "pass_tckls",
+    "rush_tckls",
+    "zebras",
+    "penalties"
+]
+
 pp = PrettyPrinter(compact=True)
+output_map = {}
 
 
 def getweek(s):
     '''get the week number out of a filename.'''
     return re.match(r"\d{4}\.week(\d{1,2})\..*\.htm", s).group(1)
+
+
+def getyear(s):
+    '''get the year number out of a filename.'''
+    return re.match(r"(\d{4})\.week\d{1,2}\..*\.htm", s).group(1)
 
 
 def soupify_comment(soup, id, el="div"):
@@ -86,17 +104,21 @@ def parse_zebras(soup, game):
 def parse_penalties(soup):
     soup = soupify_comment(soup, "all_pbp")
     res = [["player_name", "pen", "yds"]]
-    re_str = r".*Penalty on ([A-Za-z'-.]+\s[A-Za-z'-]+): ([A-Za-z\s]+), (\d+)"
+    re_str = (r".*Penalty on "  # prefix
+              r"([^:]+): "      # player/team name
+              r"([A-Za-z\s]+)"  # penalty type
+              r"(, (\d+))?")    # yards (if accepted)
     prog = re.compile(re_str)
     for tr in soup.tbody.find_all("tr"):
         if "thead" in tr.get("class", []):
             continue
         play = tr.find_all("td")[4].get_text()
         if "Penalty" in play:
+            print(play)
             m = prog.match(play)
             player_name = m.group(1)
             pen = m.group(2)
-            yds = int(m.group(3))
+            yds = int(m.group(4)) if m.group(4) else -1  # -1 means declined
             res.append([player_name, pen, yds])
     return res
 
@@ -108,14 +130,26 @@ for fname in fnames:
     html = open("%s/%s" % (FILE_DIR, fname), "r")
     soup = bs(html, "html.parser")
     game = soup.h1.get_text().split(" - ")[0]
-    tgt_dirs = parse_table(soup, "targets_directions", types=ROUTE_TYPES,
-                           attrs=ROUTE_ATTRS)
-    rush_dirs = parse_table(soup, "rush_directions", types=RUSH_TYPES,
-                            attrs=RUSH_ATTRS)
-    pass_tckls = parse_table(soup, "pass_tackles", types=PASS_TCKL_TYPES,
-                             attrs=TCKL_ATTRS)
-    rush_tckls = parse_table(soup, "rush_tackles", attrs=RUSH_TYPES)
-    zebras = parse_zebras(soup, game)
-    penalties = parse_penalties(soup)
-    pp.pprint(penalties)
-    break
+    week = getweek(fname)
+    year = getyear(fname)
+    print("Processing %s week %s, %s..." % (year, week, game))
+    output_map["tgt_dirs"] = parse_table(soup, "targets_directions",
+                                         types=ROUTE_TYPES,
+                                         attrs=ROUTE_ATTRS)
+    output_map["rush_dirs"] = parse_table(soup, "rush_directions",
+                                          types=RUSH_TYPES,
+                                          attrs=RUSH_ATTRS)
+    output_map["pass_tckls"] = parse_table(soup, "pass_tackles",
+                                           types=PASS_TCKL_TYPES,
+                                           attrs=TCKL_ATTRS)
+    output_map["rush_tckls"] = parse_table(soup, "rush_tackles",
+                                           attrs=RUSH_TYPES)
+    output_map["zebras"] = parse_zebras(soup, game)
+    output_map["penalties"] = parse_penalties(soup)
+    res_base_fname = game.replace(" at ", "@").replace(" ", "_")
+    res_fname = "%s.week%s.%s.csv" % (year, week, res_base_fname)
+    for output_dir in OUTPUT_DIRS:
+        with open("%s/%s/%s" % (ROOT_DIR, output_dir, res_fname), "w") as file:
+            writer = csv.writer(file)
+            for row in output_map[output_dir]:
+                writer.writerow(row)

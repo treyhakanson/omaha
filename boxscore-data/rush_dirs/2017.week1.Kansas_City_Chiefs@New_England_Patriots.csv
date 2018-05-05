@@ -1,0 +1,13 @@
+player_name,player_link,l_end__att,l_end__yds,l_end__td,l_tckl__att,l_tckl__yds,l_tckl__td,l_guard__att,l_guard__yds,l_guard__td,mid__att,mid__yds,mid__td,r_guard__att,r_guard__yds,r_guard__td,r_tckl__att,r_tckl__yds,r_tckl__td,r_end__att,r_end__yds,r_end__td
+Tyreek Hill,/players/H/HillTy00.htm,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,4,0
+Kareem Hunt,/players/H/HuntKa00.htm,1,58,0,0,0,0,0,0,0,6,30,0,1,9,0,5,27,0,4,24,1
+Travis Kelce,/players/K/KelcTr00.htm,0,0,0,0,0,0,0,0,0,1,4,0,0,0,0,0,0,0,0,0,0
+Alex Smith,/players/S/SmitAl03.htm,0,0,0,0,0,0,0,0,0,1,7,0,1,2,0,0,0,0,0,0,0
+De'Anthony Thomas,/players/T/ThomDe05.htm,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,4,0,0,0,0
+Charcandrick West,/players/W/WestCh01.htm,0,0,0,0,0,0,0,0,0,0,0,0,1,21,1,0,0,0,0,0,0
+Tom Brady,/players/B/BradTo00.htm,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0
+Rex Burkhead,/players/B/BurkRe00.htm,1,14,0,0,0,0,1,-1,0,1,2,0,0,0,0,0,0,0,0,0,0
+Mike Gillislee,/players/G/GillMi00.htm,1,9,0,2,18,0,3,9,1,4,6,1,2,1,1,2,-2,0,1,4,0
+Chris Hogan,/players/H/HogaCh00.htm,1,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,4,0
+Dion Lewis,/players/L/LewiDi00.htm,0,0,0,0,0,0,0,0,0,2,9,0,0,0,0,0,0,0,0,0,0
+James White,/players/W/WhitJa02.htm,2,-2,0,3,15,0,2,12,0,2,3,0,1,10,0,0,0,0,0,0,0
