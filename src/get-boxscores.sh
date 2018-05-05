@@ -1,8 +1,9 @@
 #! /usr/bin/env bash
 re="([0-9]+),([0-9]+),(/boxscores/(.*).htm)"
 BASE_URL="https://www.pro-football-reference.com"
+ROOT_DIR="../raw/boxscores"
 
-for line in $(cat "./raw/misc/boxscore-links.csv")
+for line in $(cat "../raw/misc/boxscore-links.csv")
 do
    if [[ $line =~ $re ]]
    then
@@ -11,7 +12,7 @@ do
       link="${BASH_REMATCH[3]}"
       game="${BASH_REMATCH[4]}"
       echo "Retrieving $BASE_URL$link..."
-      curl "$BASE_URL$link" > "./raw/boxscores/$year.week$week.$game.htm"
+      curl "$BASE_URL$link" > "$ROOT_DIR/$year.week$week.$game.htm"
       echo ""
    else
       echo ""

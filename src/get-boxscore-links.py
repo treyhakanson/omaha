@@ -2,8 +2,8 @@ import os
 from bs4 import BeautifulSoup as bs
 from utils import getweek, getyear
 
-LINKS_FNAME = "./raw/misc/boxscore-links.csv"
-FILE_DIR = "./raw/schedules"
+LINKS_FNAME = "../raw/misc/boxscore-links.csv"
+FILE_DIR = "../raw/schedules"
 
 links = open(LINKS_FNAME, "w")
 fnames = os.listdir(FILE_DIR)

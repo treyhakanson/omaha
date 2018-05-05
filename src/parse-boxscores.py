@@ -5,7 +5,7 @@ from pprint import PrettyPrinter
 import csv
 
 # directory containing raw, unprocessed HTML documents
-FILE_DIR = "./raw/boxscores"
+FILE_DIR = "../raw/boxscores"
 
 # Route information
 ROUTE_TYPES = ["short_l", "short_mid", "short_r", "deep_l", "deep_mid",
@@ -23,7 +23,7 @@ PASS_TCKL_TYPES = ["short_r", "short_mid", "short_l", "deep_r", "deep_mid",
 TCKL_ATTRS = ["tckl", "dfnd"]
 
 # Final output directory information
-ROOT_DIR = "boxscore-data"
+ROOT_DIR = "../boxscore-data"
 OUTPUT_DIRS = [
     "tgt_dirs",
     "rush_dirs",

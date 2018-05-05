@@ -20,8 +20,8 @@ from utils import getweek
 import pickle
 
 COLUMN_NAMES = ["Player", "Injury", "Wed", "Thu", "Fri", "Status"]
-RAW_FILE_DIR = "./raw/injuries"
-RES_FILE_DIR = "./injuries"
+RAW_FILE_DIR = "../raw/injuries"
+RES_FILE_DIR = "../injuries"
 
 fnames = os.listdir(RAW_FILE_DIR)
 fnames.sort(key=getweek)
