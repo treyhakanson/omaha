@@ -1,3 +1,7 @@
+'''
+This file contains constants that are universal across scripts. Scripts may
+also contain their own, more specific, constants.
+'''
 # full team names
 TEAM_NAMES = [
   "Arizona Cardinals",
