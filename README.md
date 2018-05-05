@@ -15,7 +15,7 @@ bash get-boxscores.sh          # retrieve boxscores
 python3 parse-boxscores.py     # parse/post-processing data from boxscores
 ```
 
-To get injury data:
+To do the same for injury data:
 
 ```sh
 bash get-injuries.sh       # retrieve raw injury pages
