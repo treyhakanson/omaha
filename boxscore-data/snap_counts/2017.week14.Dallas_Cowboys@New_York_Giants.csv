@@ -1,0 +1,89 @@
+player_name,player_link,pos,off__num,off__pct,def__num,def__pct,st__num,st__pct,team_name
+John Jerry,/players/J/JerrJo20.htm,G,80,100,0,0,2,7,New York Giants
+Ereck Flowers,/players/F/FlowEr00.htm,T,80,100,0,0,2,7,New York Giants
+Bobby Hart,/players/H/HartBo00.htm,T,80,100,0,0,2,7,New York Giants
+Eli Manning,/players/M/MannEl00.htm,QB,80,100,0,0,0,0,New York Giants
+Brett Jones,/players/J/JoneBr04.htm,C,80,100,0,0,0,0,New York Giants
+Sterling Shepard,/players/S/ShepSt00.htm,WR,77,96,0,0,0,0,New York Giants
+Roger Lewis,/players/L/LewiRo03.htm,WR,75,94,0,0,0,0,New York Giants
+Jon Halapio,/players/H/HalaJo00.htm,G,65,81,0,0,2,7,New York Giants
+Evan Engram,/players/E/EngrEv00.htm,TE,63,79,0,0,2,7,New York Giants
+Darius Powe,/players/P/PoweDa02.htm,WR,48,60,0,0,0,0,New York Giants
+Rhett Ellison,/players/E/ElliRh00.htm,TE,39,49,0,0,16,53,New York Giants
+Wayne Gallman,/players/G/GallWa00.htm,RB,37,46,0,0,14,47,New York Giants
+Shane Vereen,/players/V/VereSh00.htm,RB,24,30,0,0,3,10,New York Giants
+Orleans Darkwa,/players/D/DarkOr00.htm,RB,19,24,0,0,0,0,New York Giants
+John Greco,/players/G/GrecJo20.htm,G,15,19,0,0,2,7,New York Giants
+Kalif Raymond,/players/R/RaymKa00.htm,WR,8,10,0,0,16,53,New York Giants
+Jerell Adams,/players/A/AdamJe01.htm,TE,5,6,0,0,15,50,New York Giants
+Shane Smith,/players/S/SmitSh02.htm,FB,3,4,0,0,21,70,New York Giants
+Robert Thomas,/players/T/ThomRo04.htm,DT,2,2,18,29,7,23,New York Giants
+Ross Cockrell,/players/C/CockRo00.htm,CB,0,0,63,100,7,23,New York Giants
+Darian Thompson,/players/T/ThomDa05.htm,FS,0,0,63,100,4,13,New York Giants
+Brandon Dixon,/players/D/DixoBr00.htm,CB,0,0,63,100,1,3,New York Giants
+Kelvin Sheppard,/players/S/ShepKe00.htm,LB,0,0,63,100,0,0,New York Giants
+Olivier Vernon,/players/V/VernOl00.htm,DE,0,0,59,94,7,23,New York Giants
+Landon Collins,/players/C/CollLa00.htm,SS,0,0,53,84,6,20,New York Giants
+Calvin Munson,/players/M/MunsCa00.htm,LB,0,0,51,81,18,60,New York Giants
+Jason Pierre-Paul,/players/P/PierJa99.htm,DE,0,0,51,81,1,3,New York Giants
+Damon Harrison,/players/H/HarrDa03.htm,DT,0,0,40,63,0,0,New York Giants
+Devon Kennard,/players/K/KennDe00.htm,LB,0,0,35,56,10,33,New York Giants
+Dalvin Tomlinson,/players/T/TomlDa00.htm,DT,0,0,33,52,7,23,New York Giants
+Dominique Rodgers-Cromartie,/players/R/RodgDo99.htm,CB,0,0,25,40,19,63,New York Giants
+Jay Bromley,/players/B/BromJa00.htm,DT,0,0,23,37,2,7,New York Giants
+Darryl Morris,/players/M/MorrDa01.htm,CB,0,0,21,33,7,23,New York Giants
+Kerry Wynn,/players/W/WynnKe00.htm,DE,0,0,14,22,12,40,New York Giants
+Andrew Adams,/players/A/AdamAn01.htm,FS,0,0,10,16,25,83,New York Giants
+Avery Moss,/players/M/MossAv00.htm,DE,0,0,8,13,0,0,New York Giants
+Nat Berhe,/players/B/BerhNa00.htm,SS,0,0,0,0,21,70,New York Giants
+Ray-Ray Armstrong,/players/A/ArmsRa01.htm,LB,0,0,0,0,21,70,New York Giants
+Akeem Ayers,/players/A/AyerAk00.htm,LB,0,0,0,0,20,67,New York Giants
+Paul Perkins,/players/P/PerkPa00.htm,RB,0,0,0,0,13,43,New York Giants
+Brad Wing,/players/W/WingBr00.htm,P,0,0,0,0,10,33,New York Giants
+Zak DeOssie,/players/D/DeOsZa99.htm,LS,0,0,0,0,10,33,New York Giants
+Aldrick Rosas,/players/R/RosaAl00.htm,K,0,0,0,0,5,17,New York Giants
+Jason Witten,/players/W/WittJa00.htm,TE,63,100,0,0,7,23,Dallas Cowboys
+Travis Frederick,/players/F/FredTr00.htm,C,63,100,0,0,7,23,Dallas Cowboys
+Zack Martin,/players/M/MartZa00.htm,G,63,100,0,0,7,23,Dallas Cowboys
+Jonathan Cooper,/players/C/CoopJo01.htm,G,63,100,0,0,7,23,Dallas Cowboys
+Tyron Smith,/players/S/SmitTy00.htm,T,63,100,0,0,7,23,Dallas Cowboys
+Dak Prescott,/players/P/PresDa01.htm,QB,63,100,0,0,0,0,Dallas Cowboys
+La'el Collins,/players/C/CollLa01.htm,T,63,100,0,0,0,0,Dallas Cowboys
+Dez Bryant,/players/B/BryaDe01.htm,WR,49,78,0,0,0,0,Dallas Cowboys
+Terrance Williams,/players/W/WillTe01.htm,WR,35,56,0,0,0,0,Dallas Cowboys
+Alfred Morris,/players/M/MorrAl00.htm,RB,33,52,0,0,0,0,Dallas Cowboys
+Rod Smith,/players/S/SmitRo06.htm,FB,29,46,0,0,18,60,Dallas Cowboys
+Cole Beasley,/players/B/BeasCo00.htm,WR,29,46,0,0,3,10,Dallas Cowboys
+Noah Brown,/players/B/BrowNo00.htm,WR,24,38,0,0,10,33,Dallas Cowboys
+Geoff Swaim,/players/S/SwaiGe00.htm,TE,22,35,0,0,13,43,Dallas Cowboys
+James Hanna,/players/H/HannJa00.htm,TE,20,32,0,0,7,23,Dallas Cowboys
+Keith Smith,/players/S/SmitKe03.htm,FB,9,14,0,0,17,57,Dallas Cowboys
+Ryan Switzer,/players/S/SwitRy00.htm,WR,2,3,0,0,8,27,Dallas Cowboys
+Jourdan Lewis,/players/L/LewiJo01.htm,CB,0,0,78,98,1,3,Dallas Cowboys
+Jeff Heath,/players/H/HeatJe00.htm,SS,0,0,77,96,16,53,Dallas Cowboys
+Sean Lee,/players/L/LeexSe99.htm,LB,0,0,66,82,2,7,Dallas Cowboys
+Xavier Woods,/players/W/WoodXa00.htm,FS,0,0,63,79,6,20,Dallas Cowboys
+Demarcus Lawrence,/players/L/LawrDe00.htm,DE,0,0,59,74,4,13,Dallas Cowboys
+Anthony Hitchens,/players/H/HitcAn00.htm,LB,0,0,59,74,2,7,Dallas Cowboys
+Chidobe Awuzie,/players/A/AwuzCh00.htm,CB,0,0,58,72,1,3,Dallas Cowboys
+Maliek Collins,/players/C/CollMa00.htm,DT,0,0,57,71,3,10,Dallas Cowboys
+Byron Jones,/players/J/JoneBy00.htm,FS,0,0,48,60,20,67,Dallas Cowboys
+Tyrone Crawford,/players/C/CrawTy00.htm,DE,0,0,46,58,3,10,Dallas Cowboys
+Richard Ash,/players/A/AshxRi00.htm,DT,0,0,42,52,4,13,Dallas Cowboys
+Benson Mayowa,/players/M/MayoBe00.htm,DE,0,0,41,51,1,3,Dallas Cowboys
+Kavon Frazier,/players/F/FrazKa00.htm,SS,0,0,35,44,19,63,Dallas Cowboys
+Jaylon Smith,/players/S/SmitJa05.htm,LB,0,0,30,38,0,0,Dallas Cowboys
+Anthony Brown,/players/B/BrowAn02.htm,CB,0,0,27,34,10,33,Dallas Cowboys
+Lewis Neal,/players/N/NealLe00.htm,DT,0,0,27,34,1,3,Dallas Cowboys
+Taco Charlton,/players/C/CharTa00.htm,DE,0,0,25,31,0,0,Dallas Cowboys
+Damien Wilson,/players/W/WilsDa02.htm,LB,0,0,21,26,23,77,Dallas Cowboys
+Datone Jones,/players/J/JoneDa03.htm,DE,0,0,21,26,0,0,Dallas Cowboys
+Kyle Wilber,/players/W/WilbKy00.htm,LB,0,0,0,0,22,73,Dallas Cowboys
+Bene Benwikere,/players/B/BenwBe00.htm,CB,0,0,0,0,15,50,Dallas Cowboys
+Dan Bailey,/players/B/BailDa00.htm,K,0,0,0,0,13,43,Dallas Cowboys
+Chris Jones,/players/J/JoneCh02.htm,P,0,0,0,0,11,37,Dallas Cowboys
+L.P. Ladouceur,/players/L/LadoL.20.htm,LS,0,0,0,0,11,37,Dallas Cowboys
+Justin March-Lillard,/players/M/MarcJu00.htm,LB,0,0,0,0,10,33,Dallas Cowboys
+Byron Bell,/players/B/BellBy00.htm,T,0,0,0,0,7,23,Dallas Cowboys
+Joe Looney,/players/L/LoonJo01.htm,C,0,0,0,0,7,23,Dallas Cowboys
+Chaz Green,/players/G/GreeCh02.htm,G,0,0,0,0,7,23,Dallas Cowboys

@@ -1,0 +1,91 @@
+player_name,player_link,pos,off__num,off__pct,def__num,def__pct,st__num,st__pct,team_name
+Jonathan Cooper,/players/C/CoopJo01.htm,G,67,100,0,0,4,16,Dallas Cowboys
+Jason Witten,/players/W/WittJa00.htm,TE,67,100,0,0,4,16,Dallas Cowboys
+Travis Frederick,/players/F/FredTr00.htm,C,67,100,0,0,4,16,Dallas Cowboys
+La'el Collins,/players/C/CollLa01.htm,T,67,100,0,0,4,16,Dallas Cowboys
+Zack Martin,/players/M/MartZa00.htm,G,67,100,0,0,4,16,Dallas Cowboys
+Dak Prescott,/players/P/PresDa01.htm,QB,67,100,0,0,0,0,Dallas Cowboys
+Ezekiel Elliott,/players/E/ElliEz00.htm,RB,62,93,0,0,0,0,Dallas Cowboys
+Tyron Smith,/players/S/SmitTy00.htm,T,61,91,0,0,4,16,Dallas Cowboys
+Terrance Williams,/players/W/WillTe01.htm,WR,54,81,0,0,0,0,Dallas Cowboys
+Dez Bryant,/players/B/BryaDe01.htm,WR,46,69,0,0,0,0,Dallas Cowboys
+Cole Beasley,/players/B/BeasCo00.htm,WR,44,66,0,0,2,8,Dallas Cowboys
+Brice Butler,/players/B/ButlBr00.htm,WR,27,40,0,0,1,4,Dallas Cowboys
+Keith Smith,/players/S/SmitKe03.htm,FB,11,16,0,0,14,56,Dallas Cowboys
+Geoff Swaim,/players/S/SwaiGe00.htm,TE,10,15,0,0,12,48,Dallas Cowboys
+James Hanna,/players/H/HannJa00.htm,TE,10,15,0,0,8,32,Dallas Cowboys
+Chaz Green,/players/G/GreeCh02.htm,G,6,9,0,0,4,16,Dallas Cowboys
+Rod Smith,/players/S/SmitRo06.htm,FB,1,1,0,0,17,68,Dallas Cowboys
+Ryan Switzer,/players/S/SwitRy00.htm,WR,1,1,0,0,6,24,Dallas Cowboys
+Joe Looney,/players/L/LoonJo01.htm,C,1,1,0,0,4,16,Dallas Cowboys
+Alfred Morris,/players/M/MorrAl00.htm,RB,1,1,0,0,0,0,Dallas Cowboys
+Anthony Brown,/players/B/BrowAn02.htm,CB,0,0,57,100,11,44,Dallas Cowboys
+Byron Jones,/players/J/JoneBy00.htm,FS,0,0,57,100,10,40,Dallas Cowboys
+Orlando Scandrick,/players/S/ScanOr99.htm,CB,0,0,56,98,3,12,Dallas Cowboys
+Sean Lee,/players/L/LeexSe99.htm,LB,0,0,54,95,3,12,Dallas Cowboys
+Jeff Heath,/players/H/HeatJe00.htm,SS,0,0,47,82,17,68,Dallas Cowboys
+David Irving,/players/I/IrviDa00.htm,DE,0,0,44,77,4,16,Dallas Cowboys
+Jourdan Lewis,/players/L/LewiJo01.htm,CB,0,0,44,77,2,8,Dallas Cowboys
+Demarcus Lawrence,/players/L/LawrDe00.htm,DE,0,0,41,72,4,16,Dallas Cowboys
+Tyrone Crawford,/players/C/CrawTy00.htm,DE,0,0,40,70,4,16,Dallas Cowboys
+Maliek Collins,/players/C/CollMa00.htm,DT,0,0,40,70,1,4,Dallas Cowboys
+Anthony Hitchens,/players/H/HitcAn00.htm,LB,0,0,28,49,1,4,Dallas Cowboys
+Xavier Woods,/players/W/WoodXa00.htm,FS,0,0,24,42,15,60,Dallas Cowboys
+Damien Wilson,/players/W/WilsDa02.htm,LB,0,0,19,33,21,84,Dallas Cowboys
+Benson Mayowa,/players/M/MayoBe00.htm,DE,0,0,19,33,0,0,Dallas Cowboys
+Taco Charlton,/players/C/CharTa00.htm,DE,0,0,18,32,0,0,Dallas Cowboys
+Jaylon Smith,/players/S/SmitJa05.htm,LB,0,0,17,30,0,0,Dallas Cowboys
+Richard Ash,/players/A/AshxRi00.htm,DT,0,0,12,21,0,0,Dallas Cowboys
+Brian Price,/players/P/PricBr00.htm,DT,0,0,9,16,3,12,Dallas Cowboys
+Kavon Frazier,/players/F/FrazKa00.htm,SS,0,0,1,2,17,68,Dallas Cowboys
+Kyle Wilber,/players/W/WilbKy00.htm,LB,0,0,0,0,21,84,Dallas Cowboys
+Bene Benwikere,/players/B/BenwBe00.htm,CB,0,0,0,0,12,48,Dallas Cowboys
+Chris Jones,/players/J/JoneCh02.htm,P,0,0,0,0,9,36,Dallas Cowboys
+L.P. Ladouceur,/players/L/LadoL.20.htm,LS,0,0,0,0,9,36,Dallas Cowboys
+Mike Nugent,/players/N/nugenmik01.htm,K,0,0,0,0,9,36,Dallas Cowboys
+Justin March-Lillard,/players/M/MarcJu00.htm,LB,0,0,0,0,7,28,Dallas Cowboys
+Mitchell Schwartz,/players/S/SchwMi00.htm,T,57,100,0,0,3,12,Kansas City Chiefs
+Mitch Morse,/players/M/MorsMi00.htm,C,57,100,0,0,3,12,Kansas City Chiefs
+Bryan Witzmann,/players/W/WitzBr00.htm,G,57,100,0,0,3,12,Kansas City Chiefs
+Laurent Duvernay-Tardif,/players/D/DuveLa00.htm,G,57,100,0,0,3,12,Kansas City Chiefs
+Eric Fisher,/players/F/FishEr00.htm,T,57,100,0,0,3,12,Kansas City Chiefs
+Alex Smith,/players/S/SmitAl03.htm,QB,57,100,0,0,0,0,Kansas City Chiefs
+Demarcus Robinson,/players/R/RobiDe01.htm,WR,56,98,0,0,1,4,Kansas City Chiefs
+Travis Kelce,/players/K/KelcTr00.htm,TE,54,95,0,0,0,0,Kansas City Chiefs
+Tyreek Hill,/players/H/HillTy00.htm,WR,48,84,0,0,5,20,Kansas City Chiefs
+De'Anthony Thomas,/players/T/ThomDe05.htm,WR,39,68,0,0,12,48,Kansas City Chiefs
+Kareem Hunt,/players/H/HuntKa00.htm,RB,31,54,0,0,0,0,Kansas City Chiefs
+Charcandrick West,/players/W/WestCh01.htm,RB,23,40,0,0,4,16,Kansas City Chiefs
+Demetrius Harris,/players/H/HarrDe03.htm,TE,20,35,0,0,14,56,Kansas City Chiefs
+Ross Travis,/players/T/TravRo00.htm,TE,5,9,0,0,5,20,Kansas City Chiefs
+Jehu Chesson,/players/C/ChesJe00.htm,WR,4,7,0,0,17,68,Kansas City Chiefs
+Anthony Sherman,/players/S/SherAn00.htm,FB,3,5,0,0,15,60,Kansas City Chiefs
+Cameron Erving,/players/E/ErviCa00.htm,T,2,4,0,0,0,0,Kansas City Chiefs
+Marcus Peters,/players/P/PeteMa00.htm,CB,0,0,67,100,1,4,Kansas City Chiefs
+Ron Parker,/players/P/ParkRo01.htm,FS,0,0,67,100,1,4,Kansas City Chiefs
+Daniel Sorensen,/players/S/SoreDa01.htm,SS,0,0,65,97,9,36,Kansas City Chiefs
+Steven Nelson,/players/N/NelsSt01.htm,CB,0,0,64,96,3,12,Kansas City Chiefs
+Frank Zombo,/players/Z/ZombFr00.htm,LB,0,0,62,93,15,60,Kansas City Chiefs
+Derrick Johnson,/players/J/JohnDe25.htm,LB,0,0,53,79,0,0,Kansas City Chiefs
+Bennie Logan,/players/L/LogaBe00.htm,NT,0,0,49,73,5,20,Kansas City Chiefs
+Justin Houston,/players/H/HousJu00.htm,LB,0,0,49,73,1,4,Kansas City Chiefs
+Kenneth Acker,/players/A/AckeKe00.htm,CB,0,0,47,70,5,20,Kansas City Chiefs
+Kevin Pierre-Louis,/players/P/PierKe00.htm,LB,0,0,39,58,17,68,Kansas City Chiefs
+Chris Jones,/players/J/JoneCh09.htm,DE,0,0,38,57,2,8,Kansas City Chiefs
+Allen Bailey,/players/B/BailAl00.htm,DE,0,0,29,43,3,12,Kansas City Chiefs
+Rakeem Nunez-Roches,/players/N/NuneRa00.htm,DE,0,0,26,39,5,20,Kansas City Chiefs
+Tamba Hali,/players/H/HaliTa20.htm,LB,0,0,23,34,0,0,Kansas City Chiefs
+Reggie Ragland,/players/R/RaglRe00.htm,LB,0,0,20,30,0,0,Kansas City Chiefs
+Roy Miller,/players/M/MillRo99.htm,DT,0,0,20,30,0,0,Kansas City Chiefs
+Eric Murray,/players/M/MurrEr00.htm,FS,0,0,15,22,21,84,Kansas City Chiefs
+Terrance Mitchell,/players/M/MitcTe00.htm,CB,0,0,4,6,0,0,Kansas City Chiefs
+Terrance Smith,/players/S/SmitTe04.htm,LB,0,0,0,0,21,84,Kansas City Chiefs
+Ukeme Eligwe,/players/E/EligUk00.htm,LB,0,0,0,0,17,68,Kansas City Chiefs
+Phillip Gaines,/players/G/GainPh00.htm,CB,0,0,0,0,17,68,Kansas City Chiefs
+Akeem Hunt,/players/H/HuntAk01.htm,RB,0,0,0,0,10,40,Kansas City Chiefs
+Dustin Colquitt,/players/C/ColqDu20.htm,P,0,0,0,0,8,32,Kansas City Chiefs
+James Winchester,/players/W/WincJa00.htm,LS,0,0,0,0,8,32,Kansas City Chiefs
+Harrison Butker,/players/B/ButkHa00.htm,K,0,0,0,0,6,24,Kansas City Chiefs
+Steven Terrell,/players/T/TerrSt00.htm,FS,0,0,0,0,5,20,Kansas City Chiefs
+Tanoh Kpassagnon,/players/K/KpasTa00.htm,LB,0,0,0,0,4,16,Kansas City Chiefs
+Zach Fulton,/players/F/FultZa00.htm,G,0,0,0,0,3,12,Kansas City Chiefs

@@ -1,0 +1,83 @@
+player_name,player_link,pos,off__num,off__pct,def__num,def__pct,st__num,st__pct,team_name
+Connor McGovern,/players/M/McGoCo00.htm,C,65,100,0,0,4,14,Denver Broncos
+Matt Paradis,/players/P/ParaMa00.htm,C,65,100,0,0,4,14,Denver Broncos
+Garett Bolles,/players/B/BollGa00.htm,T,65,100,0,0,4,14,Denver Broncos
+Max Garcia,/players/G/GarcMa00.htm,G,65,100,0,0,4,14,Denver Broncos
+Cyrus Kouandjio,/players/K/KouaCy00.htm,T,65,100,0,0,4,14,Denver Broncos
+Paxton Lynch,/players/L/LyncPa00.htm,QB,65,100,0,0,0,0,Denver Broncos
+Bennie Fowler,/players/F/FowlBe00.htm,WR,58,89,0,0,10,36,Denver Broncos
+Jordan Taylor,/players/T/TaylJo01.htm,WR,51,78,0,0,14,50,Denver Broncos
+Jeff Heuerman,/players/H/HeueJe00.htm,TE,38,58,0,0,0,0,Denver Broncos
+C.J. Anderson,/players/A/AndeC.00.htm,RB,37,57,0,0,0,0,Denver Broncos
+Demaryius Thomas,/players/T/ThomDe03.htm,WR,35,54,0,0,0,0,Denver Broncos
+Isaiah McKenzie,/players/M/McKeIs00.htm,WR,27,42,0,0,1,4,Denver Broncos
+Virgil Green,/players/G/GreeVi00.htm,TE,21,32,0,0,5,18,Denver Broncos
+De'Angelo Henderson,/players/H/HendDe01.htm,RB,15,23,0,0,9,32,Denver Broncos
+Devontae Booker,/players/B/BookDe00.htm,RB,14,22,0,0,0,0,Denver Broncos
+Andy Janovich,/players/J/JanoAn00.htm,FB,11,17,0,0,19,68,Denver Broncos
+Austin Traylor,/players/T/TrayAu00.htm,TE,10,15,0,0,0,0,Denver Broncos
+Matt LaCosse,/players/L/LaCoMa00.htm,TE,8,12,0,0,5,18,Denver Broncos
+Bradley Roby,/players/R/RobyBr00.htm,CB,0,0,63,95,0,0,Denver Broncos
+Brandon Marshall,/players/M/MarsBr01.htm,LB,0,0,50,76,0,0,Denver Broncos
+Shaquil Barrett,/players/B/BarrSh00.htm,LB,0,0,48,73,9,32,Denver Broncos
+Dymonte Thomas,/players/T/ThomDy01.htm,S,0,0,46,70,15,54,Denver Broncos
+Will Parks,/players/P/ParkWi01.htm,FS,0,0,46,70,11,39,Denver Broncos
+Brendan Langley,/players/L/LangBr00.htm,CB,0,0,45,68,8,29,Denver Broncos
+Marcus Rios,/players/R/RiosMa00.htm,CB,0,0,42,64,24,86,Denver Broncos
+Shelby Harris,/players/H/HarrSh00.htm,DE,0,0,40,61,5,18,Denver Broncos
+Todd Davis,/players/D/DaviTo01.htm,LB,0,0,39,59,0,0,Denver Broncos
+DeMarcus Walker,/players/W/WalkDe03.htm,LB,0,0,36,55,0,0,Denver Broncos
+Von Miller,/players/M/MillVo00.htm,LB,0,0,33,50,0,0,Denver Broncos
+Adam Gotsis,/players/G/GotsAd00.htm,DE,0,0,32,48,9,32,Denver Broncos
+Kyle Peko,/players/P/PekoKy00.htm,DT,0,0,30,45,4,14,Denver Broncos
+Zaire Anderson,/players/A/AndeZa01.htm,LB,0,0,29,44,19,68,Denver Broncos
+Deiontrez Mount,/players/M/MounDe00.htm,LB,0,0,28,42,24,86,Denver Broncos
+Jamal Carter,/players/C/CartJa02.htm,SS,0,0,24,36,18,64,Denver Broncos
+Domata Peko,/players/P/PekoDo20.htm,NT,0,0,24,36,0,0,Denver Broncos
+Jerrol Garcia-Williams,/players/G/GarcJe01.htm,LB,0,0,23,35,20,71,Denver Broncos
+Darian Stewart,/players/S/StewDa00.htm,FS,0,0,23,35,0,0,Denver Broncos
+Chris Harris,/players/H/HarrCh01.htm,CB,0,0,15,23,0,0,Denver Broncos
+Aqib Talib,/players/T/TaliAq99.htm,CB,0,0,10,15,0,0,Denver Broncos
+Joseph Jones,/players/J/JoneJo05.htm,LB,0,0,0,0,24,86,Denver Broncos
+Brandon McManus,/players/M/McMaBr01.htm,K,0,0,0,0,9,32,Denver Broncos
+Casey Kreiter,/players/K/KreiCa00.htm,LS,0,0,0,0,8,29,Denver Broncos
+Riley Dixon,/players/D/DixoRi00.htm,P,0,0,0,0,8,29,Denver Broncos
+Allen Barbre,/players/B/BarbAl20.htm,G,0,0,0,0,4,14,Denver Broncos
+Elijah Wilkinson,/players/W/WilkEl00.htm,T,0,0,0,0,4,14,Denver Broncos
+Jehu Chesson,/players/C/ChesJe00.htm,WR,66,100,0,0,18,64,Kansas City Chiefs
+Bryan Witzmann,/players/W/WitzBr00.htm,G,66,100,0,0,5,18,Kansas City Chiefs
+Mitchell Schwartz,/players/S/SchwMi00.htm,T,66,100,0,0,5,18,Kansas City Chiefs
+Jordan Devey,/players/D/DeveJo00.htm,G,66,100,0,0,5,18,Kansas City Chiefs
+Cameron Erving,/players/E/ErviCa00.htm,T,66,100,0,0,5,18,Kansas City Chiefs
+Parker Ehinger,/players/E/EhinPa00.htm,G,66,100,0,0,5,18,Kansas City Chiefs
+Patrick Mahomes,/players/M/MahoPa00.htm,QB,62,94,0,0,0,0,Kansas City Chiefs
+Demetrius Harris,/players/H/HarrDe03.htm,TE,61,92,0,0,19,68,Kansas City Chiefs
+Demarcus Robinson,/players/R/RobiDe01.htm,WR,61,92,0,0,5,18,Kansas City Chiefs
+Anthony Sherman,/players/S/SherAn00.htm,FB,52,79,0,0,22,79,Kansas City Chiefs
+Orson Charles,/players/C/CharOr00.htm,TE,34,52,0,0,19,68,Kansas City Chiefs
+Albert Wilson,/players/W/WilsAl02.htm,WR,28,42,0,0,2,7,Kansas City Chiefs
+Akeem Hunt,/players/H/HuntAk01.htm,RB,16,24,0,0,0,0,Kansas City Chiefs
+De'Anthony Thomas,/players/T/ThomDe05.htm,WR,7,11,0,0,6,21,Kansas City Chiefs
+Kareem Hunt,/players/H/HuntKa00.htm,RB,5,8,0,0,0,0,Kansas City Chiefs
+Tyler Bray,/players/B/BrayTy00.htm,QB,4,6,0,0,0,0,Kansas City Chiefs
+Ukeme Eligwe,/players/E/EligUk00.htm,LB,0,0,65,100,21,75,Kansas City Chiefs
+Ramik Wilson,/players/W/WilsRa00.htm,LB,0,0,65,100,12,43,Kansas City Chiefs
+Terrance Mitchell,/players/M/MitcTe00.htm,CB,0,0,65,100,8,29,Kansas City Chiefs
+Tanoh Kpassagnon,/players/K/KpasTa00.htm,LB,0,0,65,100,4,14,Kansas City Chiefs
+Terrance Smith,/players/S/SmitTe04.htm,LB,0,0,62,95,16,57,Kansas City Chiefs
+Kenneth Acker,/players/A/AckeKe00.htm,CB,0,0,55,85,21,75,Kansas City Chiefs
+Keith Reaser,/players/R/ReasKe00.htm,CB,0,0,50,77,19,68,Kansas City Chiefs
+Jarvis Jenkins,/players/J/JenkJa01.htm,DE,0,0,48,74,4,14,Kansas City Chiefs
+Leon McQuay,/players/M/McQuLe01.htm,DB,0,0,46,71,18,64,Kansas City Chiefs
+Justin Hamilton,/players/H/HamiJu00.htm,DT,0,0,45,69,4,14,Kansas City Chiefs
+Rakeem Nunez-Roches,/players/N/NuneRa00.htm,DE,0,0,32,49,2,7,Kansas City Chiefs
+Eric Murray,/players/M/MurrEr00.htm,FS,0,0,29,45,13,46,Kansas City Chiefs
+Phillip Gaines,/players/G/GainPh00.htm,CB,0,0,29,45,6,21,Kansas City Chiefs
+Darrelle Revis,/players/R/ReviDa99.htm,CB,0,0,28,43,0,0,Kansas City Chiefs
+Chris Jones,/players/J/JoneCh09.htm,DE,0,0,27,42,2,7,Kansas City Chiefs
+Steven Nelson,/players/N/NelsSt01.htm,CB,0,0,4,6,0,0,Kansas City Chiefs
+Dustin Colquitt,/players/C/ColqDu20.htm,P,0,0,0,0,10,36,Kansas City Chiefs
+Harrison Butker,/players/B/ButkHa00.htm,K,0,0,0,0,10,36,Kansas City Chiefs
+James Winchester,/players/W/WincJa00.htm,LS,0,0,0,0,10,36,Kansas City Chiefs
+Frank Zombo,/players/Z/ZombFr00.htm,LB,0,0,0,0,7,25,Kansas City Chiefs
+Eric Fisher,/players/F/FishEr00.htm,T,0,0,0,0,5,18,Kansas City Chiefs

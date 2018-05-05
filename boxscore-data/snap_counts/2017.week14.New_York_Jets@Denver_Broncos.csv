@@ -1,0 +1,91 @@
+player_name,player_link,pos,off__num,off__pct,def__num,def__pct,st__num,st__pct,team_name
+Matt Paradis,/players/P/ParaMa00.htm,C,70,100,0,0,6,23,Denver Broncos
+Garett Bolles,/players/B/BollGa00.htm,T,70,100,0,0,6,23,Denver Broncos
+Donald Stephenson,/players/S/StepDo00.htm,T,70,100,0,0,6,23,Denver Broncos
+Max Garcia,/players/G/GarcMa00.htm,G,70,100,0,0,6,23,Denver Broncos
+Connor McGovern,/players/M/McGoCo00.htm,C,70,100,0,0,6,23,Denver Broncos
+Trevor Siemian,/players/S/SiemTr00.htm,QB,70,100,0,0,0,0,Denver Broncos
+Emmanuel Sanders,/players/S/SandEm00.htm,WR,47,67,0,0,0,0,Denver Broncos
+Austin Traylor,/players/T/TrayAu00.htm,TE,45,64,0,0,1,4,Denver Broncos
+Demaryius Thomas,/players/T/ThomDe03.htm,WR,45,64,0,0,0,0,Denver Broncos
+Virgil Green,/players/G/GreeVi00.htm,TE,44,63,0,0,1,4,Denver Broncos
+C.J. Anderson,/players/A/AndeC.00.htm,RB,41,59,0,0,0,0,Denver Broncos
+Cody Latimer,/players/L/LatiCo00.htm,WR,31,44,0,0,16,62,Denver Broncos
+Devontae Booker,/players/B/BookDe00.htm,RB,27,39,0,0,9,35,Denver Broncos
+Jeff Heuerman,/players/H/HeueJe00.htm,TE,25,36,0,0,0,0,Denver Broncos
+Bennie Fowler,/players/F/FowlBe00.htm,WR,22,31,0,0,18,69,Denver Broncos
+Andy Janovich,/players/J/JanoAn00.htm,FB,12,17,0,0,20,77,Denver Broncos
+Jamaal Charles,/players/C/CharJa00.htm,RB,5,7,0,0,0,0,Denver Broncos
+Jordan Taylor,/players/T/TaylJo01.htm,WR,4,6,0,0,18,69,Denver Broncos
+Allen Barbre,/players/B/BarbAl20.htm,G,2,3,0,0,6,23,Denver Broncos
+Darian Stewart,/players/S/StewDa00.htm,FS,0,0,50,100,0,0,Denver Broncos
+Brandon Marshall,/players/M/MarsBr01.htm,LB,0,0,50,100,0,0,Denver Broncos
+Aqib Talib,/players/T/TaliAq99.htm,CB,0,0,50,100,0,0,Denver Broncos
+Chris Harris,/players/H/HarrCh01.htm,CB,0,0,50,100,0,0,Denver Broncos
+Von Miller,/players/M/MillVo00.htm,LB,0,0,48,96,0,0,Denver Broncos
+Shane Ray,/players/R/RayxSh00.htm,LB,0,0,43,86,0,0,Denver Broncos
+Will Parks,/players/P/ParkWi01.htm,FS,0,0,41,82,19,73,Denver Broncos
+Zach Kerr,/players/K/KerrZa00.htm,DE,0,0,38,76,0,0,Denver Broncos
+Bradley Roby,/players/R/RobyBr00.htm,CB,0,0,35,70,12,46,Denver Broncos
+Todd Davis,/players/D/DaviTo01.htm,LB,0,0,35,70,0,0,Denver Broncos
+Shelby Harris,/players/H/HarrSh00.htm,DE,0,0,32,64,0,0,Denver Broncos
+Adam Gotsis,/players/G/GotsAd00.htm,DE,0,0,25,50,6,23,Denver Broncos
+Kyle Peko,/players/P/PekoKy00.htm,DT,0,0,14,28,0,0,Denver Broncos
+Shaquil Barrett,/players/B/BarrSh00.htm,LB,0,0,12,24,5,19,Denver Broncos
+Zaire Anderson,/players/A/AndeZa01.htm,LB,0,0,9,18,6,23,Denver Broncos
+DeMarcus Walker,/players/W/WalkDe03.htm,LB,0,0,9,18,0,0,Denver Broncos
+Jamal Carter,/players/C/CartJa02.htm,SS,0,0,4,8,6,23,Denver Broncos
+Justin Simmons,/players/S/SimmJu00.htm,SS,0,0,3,6,1,4,Denver Broncos
+Deiontrez Mount,/players/M/MounDe00.htm,LB,0,0,2,4,20,77,Denver Broncos
+Joseph Jones,/players/J/JoneJo05.htm,LB,0,0,0,0,20,77,Denver Broncos
+Marcus Rios,/players/R/RiosMa00.htm,CB,0,0,0,0,17,65,Denver Broncos
+Jerrol Garcia-Williams,/players/G/GarcJe01.htm,LB,0,0,0,0,15,58,Denver Broncos
+Brandon McManus,/players/M/McMaBr01.htm,K,0,0,0,0,12,46,Denver Broncos
+Riley Dixon,/players/D/DixoRi00.htm,P,0,0,0,0,11,42,Denver Broncos
+Casey Kreiter,/players/K/KreiCa00.htm,LS,0,0,0,0,11,42,Denver Broncos
+Elijah Wilkinson,/players/W/WilkEl00.htm,T,0,0,0,0,6,23,Denver Broncos
+Kelvin Beachum,/players/B/BeacKe00.htm,T,50,100,0,0,0,0,New York Jets
+James Carpenter,/players/C/CarpJa00.htm,G,50,100,0,0,0,0,New York Jets
+Brian Winters,/players/W/WintBr00.htm,G,50,100,0,0,0,0,New York Jets
+Wesley Johnson,/players/J/JohnWe00.htm,C,50,100,0,0,0,0,New York Jets
+Brandon Shell,/players/S/ShelBr00.htm,T,50,100,0,0,0,0,New York Jets
+Jermaine Kearse,/players/K/KearJe01.htm,WR,44,88,0,0,0,0,New York Jets
+Chad Hansen,/players/H/HansCh00.htm,WR,35,70,0,0,0,0,New York Jets
+Austin Seferian-Jenkins,/players/S/SefeAu00.htm,TE,35,70,0,0,0,0,New York Jets
+Robby Anderson,/players/A/AndeRo04.htm,WR,34,68,0,0,0,0,New York Jets
+Josh McCown,/players/M/McCoJo01.htm,QB,29,58,0,0,0,0,New York Jets
+Matt Forte,/players/F/FortMa00.htm,RB,26,52,0,0,0,0,New York Jets
+Bilal Powell,/players/P/PoweBi00.htm,RB,23,46,0,0,11,42,New York Jets
+Bryce Petty,/players/P/PettBr01.htm,QB,21,42,0,0,0,0,New York Jets
+Eric Tomlinson,/players/T/TomlEr01.htm,TE,17,34,0,0,14,54,New York Jets
+ArDarius Stewart,/players/S/StewAr00.htm,WR,15,30,0,0,2,8,New York Jets
+Neal Sterling,/players/S/SterNe00.htm,WR,8,16,0,0,19,73,New York Jets
+Lawrence Thomas,/players/T/ThomLa04.htm,FB,6,12,0,0,7,27,New York Jets
+Brent Qvale,/players/Q/QvalBr01.htm,T,5,10,0,0,5,19,New York Jets
+Jojo Natson,/players/N/NatsJo00.htm,WR,1,2,0,0,11,42,New York Jets
+Elijah McGuire,/players/M/McGuEl00.htm,RB,1,2,0,0,0,0,New York Jets
+Darron Lee,/players/L/LeexDa00.htm,LB,0,0,70,100,7,27,New York Jets
+Jamal Adams,/players/A/AdamJa00.htm,SS,0,0,70,100,6,23,New York Jets
+Demario Davis,/players/D/DaviDe00.htm,LB,0,0,70,100,6,23,New York Jets
+Marcus Maye,/players/M/MayeMa00.htm,FS,0,0,70,100,1,4,New York Jets
+Buster Skrine,/players/S/SkriBu00.htm,CB,0,0,67,96,6,23,New York Jets
+Leonard Williams,/players/W/WillLe02.htm,DE,0,0,59,84,6,23,New York Jets
+Morris Claiborne,/players/C/ClaiMo00.htm,CB,0,0,58,83,0,0,New York Jets
+Muhammad Wilkerson,/players/W/WilkMu00.htm,DE,0,0,57,81,0,0,New York Jets
+Jordan Jenkins,/players/J/JenkJo01.htm,LB,0,0,50,71,6,23,New York Jets
+Josh Martin,/players/M/MartJo02.htm,LB,0,0,42,60,8,31,New York Jets
+Darryl Roberts,/players/R/RobeDa00.htm,CB,0,0,33,47,12,46,New York Jets
+Steve McLendon,/players/M/McLeSt00.htm,NT,0,0,32,46,6,23,New York Jets
+David Bass,/players/B/BassDa00.htm,LB,0,0,28,40,14,54,New York Jets
+Mike Pennel,/players/P/PennMi00.htm,NT,0,0,23,33,6,23,New York Jets
+Xavier Cooper,/players/C/CoopXa00.htm,DT,0,0,15,21,0,0,New York Jets
+Kony Ealy,/players/E/EalyKo00.htm,DE,0,0,15,21,0,0,New York Jets
+Rontez Miles,/players/M/MileRo00.htm,FS,0,0,4,6,26,100,New York Jets
+Obum Gwacham,/players/G/GwacOb00.htm,LB,0,0,3,4,26,100,New York Jets
+Terrence Brooks,/players/B/BrooTe00.htm,SS,0,0,2,3,20,77,New York Jets
+Rashard Robinson,/players/R/RobiRa00.htm,CB,0,0,2,3,5,19,New York Jets
+Julian Stanford,/players/S/StanJu00.htm,LB,0,0,0,0,26,100,New York Jets
+Juston Burris,/players/B/BurrJu00.htm,CB,0,0,0,0,20,77,New York Jets
+Lac Edwards,/players/E/EdwaLa01.htm,P,0,0,0,0,8,31,New York Jets
+Thomas Hennessy,/players/H/HennTh00.htm,LS,0,0,0,0,1,4,New York Jets
+Chandler Catanzaro,/players/C/CataCh00.htm,K,0,0,0,0,1,4,New York Jets
