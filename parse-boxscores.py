@@ -33,6 +33,16 @@ OUTPUT_DIRS = [
     "penalties"
 ]
 
+# Pipline information; set to false to ignore
+PIPELINE = {
+    "TGT_DIRS": False,
+    "RUSH_DIRS": False,
+    "PASS_TCKLS": False,
+    "RUSH_TCKLS": True,
+    "ZEBRAS": False,
+    "PENALTIES": False
+}
+
 pp = PrettyPrinter(compact=True)
 output_map = {}
 
@@ -64,10 +74,14 @@ def soupify_comment(soup, id, el="div"):
 def parse_table(soup, table_id, types=[], attrs=[]):
     soup = soupify_comment(soup, "all_%s" % table_id)
     header = ["player_name", "player_link"]
-    for type in types:
+    if len(types) > 0:
+        for type in types:
+            for attr in attrs:
+                col = "%s__%s" % (type, attr)
+                header.append(col)
+    else:
         for attr in attrs:
-            col = "%s__%s" % (type, attr) if len(types) > 0 else attr
-            header.append(col)
+            header.append(attr)
     res = [header]
     trs = soup.find("table", {"id": table_id}).tbody.find_all("tr")
     for tr in trs:
@@ -114,7 +128,6 @@ def parse_penalties(soup):
             continue
         play = tr.find_all("td")[4].get_text()
         if "Penalty" in play:
-            print(play)
             m = prog.match(play)
             player_name = m.group(1)
             pen = m.group(2)
@@ -133,22 +146,30 @@ for fname in fnames:
     week = getweek(fname)
     year = getyear(fname)
     print("Processing %s week %s, %s..." % (year, week, game))
-    output_map["tgt_dirs"] = parse_table(soup, "targets_directions",
-                                         types=ROUTE_TYPES,
-                                         attrs=ROUTE_ATTRS)
-    output_map["rush_dirs"] = parse_table(soup, "rush_directions",
-                                          types=RUSH_TYPES,
-                                          attrs=RUSH_ATTRS)
-    output_map["pass_tckls"] = parse_table(soup, "pass_tackles",
-                                           types=PASS_TCKL_TYPES,
-                                           attrs=TCKL_ATTRS)
-    output_map["rush_tckls"] = parse_table(soup, "rush_tackles",
-                                           attrs=RUSH_TYPES)
-    output_map["zebras"] = parse_zebras(soup, game)
-    output_map["penalties"] = parse_penalties(soup)
+    if PIPELINE["TGT_DIRS"]:
+        output_map["tgt_dirs"] = parse_table(soup, "targets_directions",
+                                             types=ROUTE_TYPES,
+                                             attrs=ROUTE_ATTRS)
+    if PIPELINE["RUSH_DIRS"]:
+        output_map["rush_dirs"] = parse_table(soup, "rush_directions",
+                                              types=RUSH_TYPES,
+                                              attrs=RUSH_ATTRS)
+    if PIPELINE["PASS_TCKLS"]:
+        output_map["pass_tckls"] = parse_table(soup, "pass_tackles",
+                                               types=PASS_TCKL_TYPES,
+                                               attrs=TCKL_ATTRS)
+    if PIPELINE["RUSH_TCKLS"]:
+        output_map["rush_tckls"] = parse_table(soup, "rush_tackles",
+                                               attrs=RUSH_TYPES)
+    if PIPELINE["ZEBRAS"]:
+        output_map["zebras"] = parse_zebras(soup, game)
+    if PIPELINE["PENALTIES"]:
+        output_map["penalties"] = parse_penalties(soup)
     res_base_fname = game.replace(" at ", "@").replace(" ", "_")
     res_fname = "%s.week%s.%s.csv" % (year, week, res_base_fname)
     for output_dir in OUTPUT_DIRS:
+        if not PIPELINE[output_dir.upper()]:
+            continue
         with open("%s/%s/%s" % (ROOT_DIR, output_dir, res_fname), "w") as file:
             writer = csv.writer(file)
             for row in output_map[output_dir]:
