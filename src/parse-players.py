@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup as bs
 from utils import soupify_comment
 
 FILE_DIR = "../raw/players"
-OUTPUT_FILE = "../boxscore-data/players.csv"
+OUTPUT_FILE = "../boxscore-data/players/all-players.csv"
 
 
 def process_col(td):
@@ -17,8 +17,8 @@ def process_col(td):
 
 file = open(OUTPUT_FILE, "w")
 writer = csv.writer(file)
-writer.writerow(["player_name", "player_link", "Ht", "Wt", "40yd", "Bench",
-                 "Broad Jump", "Shuttle", "3Cone", "Vertical"])
+writer.writerow(["player_name", "player_link", "ht", "wt", "_40yd", "bench",
+                 "broad_jump", "shuttle", "_3cone", "vertical"])
 fnames = os.listdir(FILE_DIR)
 fnames.sort()
 n = len(fnames)

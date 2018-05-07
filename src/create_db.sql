@@ -1,3 +1,16 @@
+CREATE TABLE player (
+   player_name TEXT,
+   player_link TEXT,
+   ht DOUBLE,
+   wt DOUBLE,
+   _40yd DOUBLE,
+   bench DOUBLE,
+   broad_jump DOUBLE,
+   shuttle DOUBLE,
+   _3cone DOUBLE,
+   vertical DOUBLE
+);
+
 CREATE TABLE pass_tckl (
    player_name TEXT,
    player_link TEXT,
