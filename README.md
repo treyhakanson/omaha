@@ -4,7 +4,15 @@
 
 Repository to project and visualize player performance based on historical data.
 
-## Usage
+## Available Data
+
+* `boxscore-data` contains parsed components of boxscore data in CSV format
+* `injuries` contains injury week by week injury
+* `boxscore-data/db.sqlite` a sqlite3 format of all the repository's CSV data
+
+## Retrieval and Processing
+
+This section pertains to retrieval and processing of the data. All data come with the repository and will be periodically updated, but in the case that additional data is desired/required the pipeline is as follows:
 
 To retrieve, parse, and process boxscore data:
 
