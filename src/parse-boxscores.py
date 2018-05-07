@@ -41,13 +41,13 @@ OUTPUT_DIRS = [
 
 # Pipline information; set to false to ignore
 PIPELINE = {
-    "TGT_DIRS": False,
-    "RUSH_DIRS": False,
-    "PASS_TCKLS": False,
-    "RUSH_TCKLS": False,
+    "TGT_DIRS": True,
+    "RUSH_DIRS": True,
+    "PASS_TCKLS": True,
+    "RUSH_TCKLS": True,
     "SNAP_COUNTS": True,
-    "ZEBRAS": False,
-    "PENALTIES": False,
+    "ZEBRAS": True,
+    "PENALTIES": True,
 }
 # if true, will only attempt to process 1 boxscore
 DEV_MODE = False
@@ -109,9 +109,12 @@ def parse_table(soup, table_id, types=[], attrs=[], pre_cols=[], cast=True,
         # functions as a unique identifier
         player_link = tr.th.a["href"]
         tds = tr.find_all("td")[drop_leading:]
+        # using this instead of len(tds) because some box scores have some
+        # random extra columns
+        incr = (len(types) or 1) * (len(attrs) or 1) + len(pre_cols)
         player_res = []
-        for td in tds:
-            player_res.append(td.get_text() or "0")
+        for i in range(incr):
+            player_res.append(tds[i].get_text() or "0")
         if cast:
             player_res = list(map(lambda x: int(x), player_res))
         player_res = [player_name, player_link, *player_res]
