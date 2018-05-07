@@ -1,3 +1,50 @@
+CREATE TABLE rush_dir (
+   player_name TEXT,
+   player_link TEXT,
+   game TEXT,
+   l_end__att INT,
+   l_end__yds INT,
+   l_end__td INT,
+   l_tckl__att INT,
+   l_tckl__yds INT,
+   l_tckl__td INT,
+   l_guard__att INT,
+   l_guard__yds INT,
+   l_guard__td INT,
+   mid__att INT,
+   mid__yds INT,
+   mid__td INT,
+   r_guard__att INT,
+   r_guard__yds INT,
+   r_guard__td INT,
+   r_tckl__att INT,
+   r_tckl__yds INT,
+   r_tckl__td INT,
+   r_end__att INT,
+   r_end__yds INT,
+   r_end__td INT
+);
+
+CREATE TABLE rush_tckl (
+   player_name TEXT,
+   player_link TEXT,
+   game TEXT,
+   l_end INT,
+   l_tckl INT,
+   l_guard INT,
+   mid INT,
+   r_guard INT,
+   r_tckl INT,
+   r_end INT
+);
+
+CREATE TABLE penalty (
+   player_name TEXT,
+   game TEXT,
+   pen TEXT,
+   yds INT
+);
+
 CREATE TABLE player (
    player_name TEXT,
    player_link TEXT,
@@ -57,4 +104,36 @@ CREATE TABLE tgt_dir (
    deep_r__ctch INT,
    deep_r__yds INT,
    deep_r__td INT
+);
+
+CREATE TABLE snap_count (
+   player_name TEXT,
+   player_link TEXT,
+   game TEXT,
+   team_name TEXT,
+   pos TEXT,
+   off__num INT,
+   off__pct INT,
+   def__num INT,
+   def__pct INT,
+   st__num INT,
+   st__pct INT
+);
+
+CREATE TABLE zebra (
+   zebra_name TEXT,
+   zebra_link TEXT,
+   role TEXT,
+   game TEXT
+);
+
+CREATE TABLE injury (
+   player_name TEXT,
+   team TEXT,
+   week INT,
+   injury TEXT,
+   wed_ps TEXT,
+   thu_ps TEXT,
+   fri_ps TEXT,
+   final TEXT
 );

@@ -4,6 +4,14 @@ import sqlite3
 
 DB_PATH = "../boxscore-data/db.sqlite"
 TABLE_CONFIG = {
+    "penalty": {
+        "dir": "../boxscore-data/penalties",
+        "query": """
+            INSERT INTO penalty
+            VALUES (?, ?, ?, ?)
+        """,
+        "mutation": lambda row, fname: [row[0], fname, *row[1:]]
+    },
     "player": {
         "dir": "../boxscore-data/players",
         "query": """
@@ -28,6 +36,49 @@ TABLE_CONFIG = {
                     ?, ?, ?, ?, ?, ?, ?)
         """,
         "mutation": lambda row, fname: [*row[0:2], fname, *row[2:]]
+    },
+    "rush_dir": {
+        "dir": "../boxscore-data/rush_dirs",
+        "query": """
+            INSERT INTO rush_dir
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
+                    ?, ?, ?, ?)
+        """,
+        "mutation": lambda row, fname: [*row[0:2], fname, *row[2:]]
+    },
+    "rush_tckl": {
+        "dir": "../boxscore-data/rush_tckls",
+        "query": """
+            INSERT INTO rush_tckl
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """,
+        "mutation": lambda row, fname: [*row[0:2], fname, *row[2:]]
+    },
+    "snap_count": {
+        "dir": "../boxscore-data/snap_counts",
+        "query": """
+            INSERT INTO snap_count
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """,
+        "mutation": lambda row, fname: [*row[0:2], fname, row[-1], *row[2:-1]]
+    },
+    "zebra": {
+        "dir": "../boxscore-data/zebras",
+        "query": """
+            INSERT INTO zebra
+            VALUES (?, ?, ?, ?)
+        """,
+        "mutation": lambda row, fname: [*row[0:3], fname]
+    },
+    "injury": {
+        "dir": "../injuries",
+        "query": """
+            INSERT INTO injury
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        """,
+        "mutation": lambda row, fname: [*row[0:2],
+                                        fname[0:-4].replace("week", ""),
+                                        *row[2:]]
     }
 }
 

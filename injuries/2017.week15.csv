@@ -1,0 +1,356 @@
+player_name,team,injury,wed_ps,thu_ps,fri_ps,final
+Budda Baker,Arizona Cardinals,Thigh,DNP,LIMITED,FULL,Available
+Antoine Bethea,Arizona Cardinals,Knee,DNP,LIMITED,FULL,Available
+Alex Boone,Arizona Cardinals,"Back,illness",LIMITED,LIMITED,FULL,Available
+John Brown,Arizona Cardinals,Toe,LIMITED,LIMITED,LIMITED,Out
+Karlos Dansby,Arizona Cardinals,Not Injury Related,DNP,FULL,FULL,Available
+Larry Fitzgerald,Arizona Cardinals,Not Injury Related,DNP,FULL,FULL,Available
+Jermaine Gresham,Arizona Cardinals,Illness,--,DNP,DNP,Questionable
+Chandler Jones,Arizona Cardinals,Hip,LIMITED,FULL,FULL,Available
+Gabe Martin,Arizona Cardinals,Hamstring,DNP,DNP,DNP,Out
+Josh Mauro,Arizona Cardinals,Ankle,DNP,LIMITED,LIMITED,Questionable
+Adrian Peterson,Arizona Cardinals,Neck,DNP,DNP,DNP,Out
+Corey Peters,Arizona Cardinals,Ankle,LIMITED,LIMITED,LIMITED,Questionable
+Frostee Rucker,Arizona Cardinals,Not Injury Related,DNP,FULL,FULL,Available
+Earl Watford,Arizona Cardinals,Ankle,DNP,DNP,DNP,Out
+Kerwynn Williams,Arizona Cardinals,Ribs,FULL,FULL,FULL,Available
+Adrian Clayborn,Atlanta Falcons,Hamstring,DNP,LIMITED,LIMITED,Available
+Tevin Coleman,Atlanta Falcons,Concussion,DNP,DNP,DNP,Out
+Andrew Levitre,Atlanta Falcons,Triceps,DNP,DNP,DNP,Out
+Mohamed Sanu,Atlanta Falcons,Knee,LIMITED,LIMITED,LIMITED,Available
+Eric Saubert,Atlanta Falcons,Back,LIMITED,FULL,FULL,Available
+Wes Schweitzer,Atlanta Falcons,Groin,LIMITED,FULL,FULL,Available
+Maurice Canady,Baltimore Ravens,Knee,LIMITED,LIMITED,LIMITED,Questionable
+Jermaine Eluemunor,Baltimore Ravens,Shoulder,FULL,FULL,FULL,Questionable
+Ryan Jensen,Baltimore Ravens,Ankle,LIMITED,FULL,FULL,Questionable
+Ryan Mallett,Baltimore Ravens,Hips,--,--,LIMITED,Questionable
+Chris Moore,Baltimore Ravens,Hip,LIMITED,FULL,FULL,Questionable
+Za'Darius Smith,Baltimore Ravens,Shoulder,LIMITED,FULL,FULL,Questionable
+Terrell Suggs,Baltimore Ravens,Not Injury Related,--,--,DNP,Available
+Mike Wallace,Baltimore Ravens,Ankle,DNP,DNP,LIMITED,Questionable
+Kelvin Benjamin,Buffalo Bills,Knee,LIMITED,LIMITED,LIMITED,Questionable
+Charles Clay,Buffalo Bills,Knee,LIMITED,LIMITED,FULL,Available
+Cordy Glenn,Buffalo Bills,"Foot,ankle",DNP,LIMITED,DNP,Out
+Seantrel Henderson,Buffalo Bills,Back,LIMITED,FULL,FULL,Available
+Andre Holmes,Buffalo Bills,Neck,DNP,LIMITED,FULL,Available
+Leonard Johnson,Buffalo Bills,Knee,FULL,FULL,FULL,Available
+LeSean McCoy,Buffalo Bills,Not Injury Related,LIMITED,FULL,DNP,Available
+John Miller,Buffalo Bills,Ankle,FULL,DNP,DNP,Out
+Nathan Peterman,Buffalo Bills,Concussion,LIMITED,FULL,FULL,Out
+Tyrod Taylor,Buffalo Bills,Knee,FULL,FULL,FULL,Available
+Kyle Williams,Buffalo Bills,Groin,DNP,LIMITED,FULL,Available
+Mike Adams,Carolina Panthers,Not Injury Related,DNP,FULL,--,Available
+Mario Addison,Carolina Panthers,Illness,--,DNP,FULL,Available
+Brenton Bersin,Carolina Panthers,Toe,DNP,FULL,FULL,Available
+Kaelin Clay,Carolina Panthers,Shoulder,LIMITED,FULL,FULL,Available
+Thomas Davis,Carolina Panthers,Back,LIMITED,FULL,FULL,Available
+Devin Funchess,Carolina Panthers,Shoulder,LIMITED,FULL,DNP,Questionable
+Ryan Kalil,Carolina Panthers,Neck,FULL,FULL,FULL,Available
+Luke Kuechly,Carolina Panthers,Shoulder,FULL,FULL,FULL,Available
+Tyler Larsen,Carolina Panthers,Foot,LIMITED,FULL,DNP,Questionable
+Christian McCaffrey,Carolina Panthers,Shoulder,FULL,FULL,FULL,Available
+Captain Munnerlyn,Carolina Panthers,Not Injury Related,DNP,FULL,FULL,Available
+Cam Newton,Carolina Panthers,Right Shoulder,LIMITED,LIMITED,FULL,Available
+Greg Olsen,Carolina Panthers,Foot,FULL,FULL,FULL,Available
+Michael Palardy,Carolina Panthers,Shoulder,FULL,FULL,FULL,Available
+Julius Peppers,Carolina Panthers,Not Injury Related,DNP,FULL,FULL,Available
+Russell Shepard,Carolina Panthers,Shoulder,LIMITED,FULL,FULL,Available
+Jonathan Stewart,Carolina Panthers,Not Injury Related,DNP,FULL,FULL,Available
+Shaq Thompson,Carolina Panthers,Foot,DNP,DNP,DNP,Out
+Trai Turner,Carolina Panthers,Concussion,DNP,DNP,DNP,Out
+Adrian Amos,Chicago Bears,Hamstring,LIMITED,LIMITED,LIMITED,Questionable
+Eddie Goldman,Chicago Bears,Hip,LIMITED,LIMITED,LIMITED,Questionable
+DeAndre Houston-Carson,Chicago Bears,Ankle,LIMITED,LIMITED,LIMITED,Questionable
+Pernell McPhee,Chicago Bears,Shoulder,LIMITED,LIMITED,FULL,Available
+Adam Shaheen,Chicago Bears,Chest,LIMITED,LIMITED,LIMITED,Questionable
+Kendall Wright,Chicago Bears,Shoulder,LIMITED,LIMITED,FULL,Available
+Giovani Bernard,Cincinnati Bengals,Knee,LIMITED,LIMITED,FULL,Available
+Vontaze Burfict,Cincinnati Bengals,Concussion,DNP,DNP,DNP,Out
+Darqueze Dennard,Cincinnati Bengals,Knee,DNP,LIMITED,FULL,Available
+Carlos Dunlap,Cincinnati Bengals,Chest,LIMITED,LIMITED,FULL,Available
+T.J. Johnson,Cincinnati Bengals,Pectoral,--,--,FULL,Doubtful
+Dre Kirkpatrick,Cincinnati Bengals,Concussion,DNP,DNP,DNP,Out
+Tyler Kroft,Cincinnati Bengals,Hamstring,DNP,LIMITED,FULL,Available
+Kevin Minter,Cincinnati Bengals,Hamstring,DNP,DNP,DNP,Out
+Joe Mixon,Cincinnati Bengals,Concussion,DNP,LIMITED,FULL,Questionable
+Cedric Ogbuehi,Cincinnati Bengals,Shoulder,LIMITED,LIMITED,FULL,Available
+Pat Sims,Cincinnati Bengals,Heel,LIMITED,LIMITED,FULL,Available
+Andre Smith,Cincinnati Bengals,Not Injury Related,--,--,FULL,Available
+Nick Vigil,Cincinnati Bengals,Ankle,DNP,DNP,DNP,Out
+Shawn Williams,Cincinnati Bengals,Hamstring,LIMITED,LIMITED,FULL,Questionable
+Eric Winston,Cincinnati Bengals,Hip,--,LIMITED,FULL,Available
+Briean Boddy-Calhoun,Cleveland Browns,Knee,DNP,DNP,DNP,Doubtful
+Shon Coleman,Cleveland Browns,"Shoulder,thumb",LIMITED,LIMITED,FULL,Available
+Matt Hazel,Cleveland Browns,Hamstring,--,LIMITED,LIMITED,Questionable
+Darius Hillary,Cleveland Browns,Knee,--,DNP,DNP,Questionable
+Josh Keyes,Cleveland Browns,Wrist,FULL,FULL,FULL,Available
+David Njoku,Cleveland Browns,"Foot,wrist",LIMITED,LIMITED,FULL,Available
+Jabrill Peppers,Cleveland Browns,Knee,LIMITED,LIMITED,FULL,Available
+Danny Shelton,Cleveland Browns,"Chest,ribs",LIMITED,LIMITED,FULL,Available
+Jamar Taylor,Cleveland Browns,Foot,DNP,DNP,DNP,Questionable
+J.C. Tretter,Cleveland Browns,Knee,LIMITED,LIMITED,FULL,Available
+Brice Butler,Dallas Cowboys,Foot,DNP,DNP,DNP,Questionable
+La'el Collins,Dallas Cowboys,Back,DNP,LIMITED,LIMITED,Questionable
+Maliek Collins,Dallas Cowboys,Foot,LIMITED,LIMITED,LIMITED,Questionable
+Justin Durant,Dallas Cowboys,Concussion,LIMITED,FULL,FULL,Out
+James Hanna,Dallas Cowboys,Knee,DNP,LIMITED,LIMITED,Questionable
+David Irving,Dallas Cowboys,Concussion,DNP,DNP,DNP,Out
+Sean Lee,Dallas Cowboys,"Hamstring,back",LIMITED,LIMITED,DNP,Questionable
+Orlando Scandrick,Dallas Cowboys,Back,DNP,DNP,DNP,Out
+Tyron Smith,Dallas Cowboys,Back,DNP,LIMITED,LIMITED,Questionable
+Jamal Carter,Denver Broncos,Shoulder,DNP,LIMITED,FULL,Available
+Todd Davis,Denver Broncos,Ankle,FULL,FULL,FULL,Available
+Adam Gotsis,Denver Broncos,Ankle,FULL,FULL,FULL,Available
+Joseph Jones,Denver Broncos,Achilles,FULL,FULL,FULL,Available
+Paxton Lynch,Denver Broncos,Ankle,DNP,DNP,DNP,Out
+Matt Paradis,Denver Broncos,Wrist,FULL,FULL,FULL,Available
+Domata Peko,Denver Broncos,Knee,LIMITED,LIMITED,LIMITED,Questionable
+Shane Ray,Denver Broncos,Wrist,FULL,FULL,FULL,Available
+Emmanuel Sanders,Denver Broncos,Ankle,FULL,FULL,FULL,Available
+Trevor Siemian,Denver Broncos,Low Back,FULL,FULL,FULL,Available
+Justin Simmons,Denver Broncos,Ankle,DNP,DNP,--,Available
+Ameer Abdullah,Detroit Lions,Neck,FULL,FULL,FULL,Available
+Jamal Agnew,Detroit Lions,Knee,FULL,FULL,FULL,Available
+Ezekiel Ansah,Detroit Lions,Ankle,LIMITED,LIMITED,LIMITED,Questionable
+Emmett Cleary,Detroit Lions,Ankle,FULL,FULL,FULL,Questionable
+Taylor Decker,Detroit Lions,Shoulder,LIMITED,LIMITED,FULL,Available
+TJ Jones,Detroit Lions,Not Injury Related,--,DNP,FULL,Available
+T.J. Lang,Detroit Lions,Foot,DNP,DNP,LIMITED,Questionable
+Nevin Lawson,Detroit Lions,Illness,DNP,DNP,FULL,Available
+Corey Robinson,Detroit Lions,Foot,LIMITED,LIMITED,FULL,Available
+Matthew Stafford,Detroit Lions,Right Hand,FULL,FULL,FULL,Available
+Travis Swanson,Detroit Lions,Concussion,DNP,DNP,DNP,Out
+Ricky Wagner,Detroit Lions,Ankle,DNP,DNP,DNP,Out
+Ahmad Brooks,Green Bay Packers,Back,LIMITED,FULL,FULL,Available
+Quinton Dial,Green Bay Packers,"Chest,knee",LIMITED,LIMITED,LIMITED,Available
+Demetri Goodson,Green Bay Packers,Hamstring,LIMITED,LIMITED,LIMITED,Questionable
+Davon House,Green Bay Packers,"Shoulder,back",DNP,DNP,DNP,Out
+Josh Jones,Green Bay Packers,Not Injury Related,DNP,--,--,Available
+Lucas Patrick,Green Bay Packers,Hand,FULL,FULL,FULL,Available
+Nick Perry,Green Bay Packers,"Foot,shoulder",LIMITED,LIMITED,LIMITED,Questionable
+Jake Ryan,Green Bay Packers,Knee,DNP,LIMITED,LIMITED,Questionable
+Jason Spriggs,Green Bay Packers,Hip,--,LIMITED,LIMITED,Questionable
+Jeff Allen,Houston Texans,Groin,DNP,DNP,LIMITED,Available
+Alfred Blue,Houston Texans,Concussion,FULL,FULL,FULL,Available
+Jadeveon Clowney,Houston Texans,"Knee,illness",DNP,DNP,DNP,Questionable
+Julie'n Davenport,Houston Texans,Shoulder,LIMITED,LIMITED,LIMITED,Available
+Brandon Dunn,Houston Texans,Back,FULL,FULL,FULL,Available
+Andre Ellington,Houston Texans,Knee,LIMITED,LIMITED,FULL,Available
+Andre Hal,Houston Texans,Knee,LIMITED,FULL,FULL,Available
+Joel Heath,Houston Texans,Knee,LIMITED,LIMITED,LIMITED,Available
+DeAndre Hopkins,Houston Texans,Toe,--,DNP,DNP,Questionable
+Jelani Jenkins,Houston Texans,Concussion,DNP,DNP,DNP,Out
+Johnathan Joseph,Houston Texans,Illness,--,DNP,FULL,Available
+Kendall Lamm,Houston Texans,Concussion,DNP,DNP,DNP,Out
+Greg Mancz,Houston Texans,Knee,FULL,FULL,FULL,Available
+Braxton Miller,Houston Texans,Concussion,DNP,DNP,DNP,Out
+Lamar Miller,Houston Texans,Knee,LIMITED,LIMITED,FULL,Available
+Brian Peters,Houston Texans,Hamstring,LIMITED,LIMITED,LIMITED,Available
+MyCole Pruitt,Houston Texans,Calf,--,--,LIMITED,Questionable
+Tom Savage,Houston Texans,Concussion,DNP,DNP,DNP,Out
+Xavier Su'a-Filo,Houston Texans,Groin,LIMITED,LIMITED,LIMITED,Available
+Jordan Todman,Houston Texans,Hand,FULL,FULL,FULL,Available
+DeAndrew White,Houston Texans,Thigh,FULL,FULL,FULL,Available
+Jacoby Brissett,Indianapolis Colts,Quadricep,FULL,FULL,FULL,Available
+Darrell Daniels,Indianapolis Colts,Hamstring,LIMITED,LIMITED,LIMITED,Out
+Frank Gore,Indianapolis Colts,"Not Injury Related,hand",FULL,DNP,DNP,Available
+Nate Hairston,Indianapolis Colts,Concussion,--,LIMITED,DNP,Out
+Ryan Kelly,Indianapolis Colts,Concussion,FULL,FULL,DNP,Out
+Rashaan Melvin,Indianapolis Colts,Hand,DNP,LIMITED,LIMITED,Out
+Donte Moncrief,Indianapolis Colts,Ankle,DNP,DNP,DNP,Out
+Hassan Ridgeway,Indianapolis Colts,Shoulder,FULL,FULL,FULL,Available
+Blake Bortles,Jacksonville Jaguars,Right Wrist,FULL,FULL,FULL,Available
+Leonard Fournette,Jacksonville Jaguars,Quadricep,DNP,DNP,DNP,Questionable
+Allen Hurns,Jacksonville Jaguars,Ankle,DNP,DNP,DNP,Out
+Marqise Lee,Jacksonville Jaguars,Foot,LIMITED,LIMITED,LIMITED,Available
+Larry Pinkard,Jacksonville Jaguars,Concussion,DNP,DNP,DNP,Out
+Jalen Ramsey,Jacksonville Jaguars,Back,--,LIMITED,LIMITED,Available
+Cam Robinson,Jacksonville Jaguars,Back,DNP,LIMITED,LIMITED,Available
+Telvin Smith,Jacksonville Jaguars,Concussion,FULL,FULL,FULL,Available
+Allen Bailey,Kansas City Chiefs,Knee,FULL,FULL,FULL,Available
+Tamba Hali,Kansas City Chiefs,Knee,LIMITED,LIMITED,DNP,Questionable
+Bennie Logan,Kansas City Chiefs,Knee,FULL,FULL,FULL,Available
+Mitch Morse,Kansas City Chiefs,Foot,DNP,DNP,DNP,Out
+Eric Murray,Kansas City Chiefs,Ankle,LIMITED,FULL,FULL,Questionable
+Kevin Pierre-Louis,Kansas City Chiefs,Quadricep,FULL,LIMITED,FULL,Questionable
+Darrelle Revis,Kansas City Chiefs,Shoulder,FULL,FULL,FULL,Available
+Demarcus Robinson,Kansas City Chiefs,Knee,FULL,FULL,FULL,Available
+Albert Wilson,Kansas City Chiefs,"Hamstring,shoulder",FULL,FULL,FULL,Available
+Antonio Gates,Los Angeles Chargers,Not Injury Related,--,DNP,FULL,Available
+Casey Hayward,Los Angeles Chargers,Calf,--,--,DNP,Questionable
+Hunter Henry,Los Angeles Chargers,Calf,LIMITED,FULL,FULL,Available
+Corey Liuget,Los Angeles Chargers,Toe,LIMITED,LIMITED,FULL,Available
+Russell Okung,Los Angeles Chargers,Knee,LIMITED,LIMITED,FULL,Available
+Denzel Perryman,Los Angeles Chargers,Abdomen,LIMITED,FULL,FULL,Available
+Adrian Phillips,Los Angeles Chargers,Hamstring,LIMITED,FULL,FULL,Available
+Spencer Pulley,Los Angeles Chargers,Knee,LIMITED,FULL,FULL,Available
+Brandon Allen,Los Angeles Rams,Back,--,DNP,DNP,Doubtful
+Mark Barron,Los Angeles Rams,Not Injury Related,DNP,LIMITED,FULL,Available
+Connor Barwin,Los Angeles Rams,Forearm,FULL,FULL,FULL,Available
+Rob Havenstein,Los Angeles Rams,Knee,LIMITED,LIMITED,FULL,Available
+John Sullivan,Los Angeles Rams,Illness,DNP,LIMITED,DNP,Available
+Andrew Whitworth,Los Angeles Rams,Knee,DNP,DNP,FULL,Available
+Robert Woods,Los Angeles Rams,Shoulder,LIMITED,FULL,FULL,Available
+Andre Branch,Miami Dolphins,Knee,DNP,DNP,LIMITED,Questionable
+Jermon Bushrod,Miami Dolphins,Foot,DNP,LIMITED,DNP,Out
+MarQueis Gray,Miami Dolphins,Shoulder,FULL,FULL,FULL,Available
+Xavien Howard,Miami Dolphins,Illness,DNP,LIMITED,FULL,Questionable
+Matt Moore,Miami Dolphins,Foot,DNP,LIMITED,LIMITED,Doubtful
+Jordan Phillips,Miami Dolphins,Ankle,LIMITED,FULL,FULL,Questionable
+Mike Pouncey,Miami Dolphins,Hip,DNP,DNP,FULL,Available
+Ndamukong Suh,Miami Dolphins,Knee,DNP,FULL,DNP,Available
+Cordrea Tankersley,Miami Dolphins,"Ankle,shoulder",DNP,LIMITED,LIMITED,Doubtful
+Michael Thomas,Miami Dolphins,Knee,DNP,DNP,DNP,Doubtful
+Cameron Wake,Miami Dolphins,Not Injury Related,--,--,DNP,Available
+Damien Williams,Miami Dolphins,"Shoulder,illness",DNP,LIMITED,DNP,Doubtful
+Mackensie Alexander,Minnesota Vikings,Ribs,DNP,DNP,DNP,Out
+Blake Bell,Minnesota Vikings,Shoulder,DNP,DNP,DNP,Out
+Pat Elflein,Minnesota Vikings,Shoulder,LIMITED,LIMITED,FULL,Available
+Linval Joseph,Minnesota Vikings,Knee,LIMITED,FULL,FULL,Available
+Emmanuel Lamur,Minnesota Vikings,Foot,DNP,LIMITED,LIMITED,Questionable
+Jerick McKinnon,Minnesota Vikings,Shoulder,LIMITED,FULL,FULL,Available
+David Morgan,Minnesota Vikings,Concussion,LIMITED,FULL,FULL,Available
+Riley Reiff,Minnesota Vikings,Ankle,DNP,DNP,LIMITED,Doubtful
+Mike Remmers,Minnesota Vikings,Back,LIMITED,LIMITED,FULL,Available
+Xavier Rhodes,Minnesota Vikings,Hip,DNP,LIMITED,FULL,Available
+Kyle Rudolph,Minnesota Vikings,Ankle,DNP,DNP,DNP,Doubtful
+Jeremiah Sirles,Minnesota Vikings,Knee,LIMITED,LIMITED,FULL,Available
+Shamar Stephen,Minnesota Vikings,Shoulder,LIMITED,LIMITED,FULL,Available
+Adam Thielen,Minnesota Vikings,Knee,LIMITED,FULL,FULL,Available
+Johnson Bademosi,New England Patriots,Illness,--,DNP,--,Available
+Tom Brady,New England Patriots,Achilles,FULL,FULL,--,Available
+Alan Branch,New England Patriots,Knee,DNP,DNP,DNP,Out
+Malcolm Butler,New England Patriots,Ankle,LIMITED,LIMITED,--,Available
+Brandin Cooks,New England Patriots,Hand,FULL,FULL,--,Available
+Trey Flowers,New England Patriots,Rib,LIMITED,LIMITED,LIMITED,Questionable
+Stephon Gilmore,New England Patriots,Ankle,LIMITED,LIMITED,LIMITED,Questionable
+David Harris,New England Patriots,Ankle,LIMITED,LIMITED,LIMITED,Questionable
+Chris Hogan,New England Patriots,Shoulder,LIMITED,LIMITED,LIMITED,Questionable
+Brandon King,New England Patriots,Hamstring,LIMITED,LIMITED,LIMITED,Questionable
+Eric Lee,New England Patriots,Ankle,LIMITED,LIMITED,LIMITED,Questionable
+Matt Slater,New England Patriots,Hamstring,LIMITED,LIMITED,LIMITED,Questionable
+Kyle Van Noy,New England Patriots,Calf,LIMITED,LIMITED,LIMITED,Questionable
+LaAdrian Waddle,New England Patriots,Ankle,LIMITED,LIMITED,LIMITED,Questionable
+Deatrich Wise,New England Patriots,Foot,LIMITED,LIMITED,LIMITED,Questionable
+Jonathan Freeny,New Orleans Saints,Not Injury Related,--,--,DNP,Available
+Ted Ginn Jr.,New Orleans Saints,Rib,DNP,LIMITED,LIMITED,Questionable
+Trey Hendrickson,New Orleans Saints,Ankle,DNP,DNP,DNP,Out
+Josh Hill,New Orleans Saints,Shoulder,LIMITED,LIMITED,LIMITED,Available
+Alvin Kamara,New Orleans Saints,Concussion,FULL,FULL,FULL,Available
+Senio Kelemete,New Orleans Saints,Concussion,FULL,FULL,FULL,Available
+A.J. Klein,New Orleans Saints,Groin,DNP,DNP,DNP,Out
+Andrus Peat,New Orleans Saints,Groin,LIMITED,LIMITED,DNP,Questionable
+Michael Thomas,New Orleans Saints,Eye,FULL,FULL,FULL,Available
+Kenny Vaccaro,New Orleans Saints,Groin,LIMITED,LIMITED,LIMITED,Available
+Nat Berhe,New York Giants,Hamstring,--,LIMITED,DNP,Out
+Landon Collins,New York Giants,Ankle,DNP,LIMITED,DNP,Doubtful
+Brandon Dixon,New York Giants,"Heel,hamstring",LIMITED,LIMITED,LIMITED,Questionable
+Rhett Ellison,New York Giants,Finger,LIMITED,LIMITED,LIMITED,Available
+B.J. Goodson,New York Giants,Ankle,LIMITED,LIMITED,LIMITED,Available
+Damon Harrison,New York Giants,Not Injury Related,DNP,LIMITED,FULL,Available
+Roger Lewis,New York Giants,Ankle,DNP,DNP,LIMITED,Questionable
+Jason Pierre-Paul,New York Giants,Finger,LIMITED,FULL,FULL,Available
+Justin Pugh,New York Giants,Back,DNP,DNP,--,Available
+Travis Rudolph,New York Giants,Hamstring,LIMITED,LIMITED,LIMITED,Questionable
+Sterling Shepard,New York Giants,Hamstring,--,LIMITED,LIMITED,Available
+Robby Anderson,New York Jets,Hamstring,FULL,FULL,FULL,Available
+James Carpenter,New York Jets,Knee,FULL,FULL,FULL,Available
+Bruce Carter,New York Jets,Groin,LIMITED,LIMITED,FULL,Available
+Morris Claiborne,New York Jets,Foot,DNP,LIMITED,FULL,Available
+Matt Forte,New York Jets,Knee,DNP,DNP,DNP,Questionable
+Thomas Hennessy,New York Jets,Concussion,LIMITED,LIMITED,FULL,Available
+Jordan Jenkins,New York Jets,Shoulder,FULL,FULL,FULL,Available
+Jermaine Kearse,New York Jets,Shoulder,FULL,FULL,FULL,Available
+Marcus Maye,New York Jets,Finger,FULL,FULL,FULL,Available
+Elijah McGuire,New York Jets,Ankle,DNP,LIMITED,FULL,Available
+Steve McLendon,New York Jets,Hip,--,LIMITED,FULL,Available
+Rontez Miles,New York Jets,Hamstring,DNP,LIMITED,FULL,Available
+Rashard Robinson,New York Jets,Not Injury Related,DNP,FULL,FULL,Available
+Brandon Shell,New York Jets,Knee,--,--,FULL,Available
+Muhammad Wilkerson,New York Jets,Not Injury Related,--,--,DNP,Out
+Brian Winters,New York Jets,"Abdomen,ankle",DNP,LIMITED,LIMITED,Questionable
+David Amerson,Oakland Raiders,Foot,LIMITED,DNP,DNP,Doubtful
+Denico Autry,Oakland Raiders,"Hand,ankle",DNP,LIMITED,FULL,Questionable
+Jared Cook,Oakland Raiders,Wrist,LIMITED,LIMITED,FULL,Available
+Amari Cooper,Oakland Raiders,Ankle,DNP,DNP,DNP,Out
+Mario Edwards Jr.,Oakland Raiders,Ankle,DNP,DNP,DNP,Out
+Jon Feliciano,Oakland Raiders,Concussion,DNP,LIMITED,LIMITED,Questionable
+Bruce Irvin,Oakland Raiders,Not Injury Related,DNP,--,--,Available
+Marshawn Lynch,Oakland Raiders,Not Injury Related,--,DNP,--,Available
+Khalil Mack,Oakland Raiders,Not Injury Related,DNP,--,--,Available
+Keith McGill,Oakland Raiders,Knee,LIMITED,LIMITED,LIMITED,Questionable
+Obi Melifonwu,Oakland Raiders,Hip,DNP,DNP,DNP,Out
+Jamize Olawale,Oakland Raiders,Ankle,FULL,FULL,FULL,Available
+Cordarrelle Patterson,Oakland Raiders,Hip,FULL,FULL,FULL,Available
+Clive Walford,Oakland Raiders,"Concussion,neck",DNP,DNP,DNP,Out
+Jihad Ward,Oakland Raiders,Foot,FULL,FULL,FULL,Available
+Derek Barnett,Philadelphia Eagles,Groin,FULL,FULL,FULL,Available
+Brent Celek,Philadelphia Eagles,Not Injury Related,DNP,FULL,FULL,Available
+Zach Ertz,Philadelphia Eagles,Concussion,FULL,FULL,FULL,Available
+Alshon Jeffery,Philadelphia Eagles,Illness,--,DNP,FULL,Available
+Rodney McLeod,Philadelphia Eagles,Quadricep,LIMITED,FULL,FULL,Available
+Steven Means,Philadelphia Eagles,Illness,--,DNP,FULL,Available
+Joe Walker,Philadelphia Eagles,Neck,FULL,FULL,FULL,Available
+Stefen Wisniewski,Philadelphia Eagles,Ankle,DNP,LIMITED,LIMITED,Questionable
+Martavis Bryant,Pittsburgh Steelers,Not Injury Related,DNP,FULL,FULL,Available
+Joe Haden,Pittsburgh Steelers,Fibula,LIMITED,LIMITED,LIMITED,Questionable
+Tyler Matakevich,Pittsburgh Steelers,Shoulder,LIMITED,LIMITED,FULL,Available
+Vance McDonald,Pittsburgh Steelers,Shoulder,DNP,DNP,DNP,Out
+Maurkice Pouncey,Pittsburgh Steelers,Hip,--,LIMITED,FULL,Available
+Coty Sensabaugh,Pittsburgh Steelers,Shoulder,DNP,DNP,FULL,Questionable
+JuJu Smith-Schuster,Pittsburgh Steelers,Hamstring,--,LIMITED,LIMITED,Questionable
+Stephon Tuitt,Pittsburgh Steelers,Illness,DNP,FULL,FULL,Available
+Trenton Brown,San Francisco 49ers,Shoulder,DNP,DNP,DNP,Out
+DeForest Buckner,San Francisco 49ers,Not Injury Related,--,DNP,FULL,Available
+Garrett Celek,San Francisco 49ers,Knee,LIMITED,LIMITED,FULL,Available
+Adrian Colbert,San Francisco 49ers,"Thumb,thigh",LIMITED,LIMITED,LIMITED,Available
+Elvis Dumervil,San Francisco 49ers,Not Injury Related,DNP,FULL,FULL,Available
+George Kittle,San Francisco 49ers,Ankle,FULL,FULL,FULL,Available
+Greg Mabin,San Francisco 49ers,Calf,--,LIMITED,LIMITED,Questionable
+Earl Mitchell,San Francisco 49ers,Not Injury Related,--,DNP,FULL,Available
+Louis Murphy,San Francisco 49ers,Illness,DNP,LIMITED,LIMITED,Available
+Mark Nzeocha,San Francisco 49ers,Hamstring,LIMITED,LIMITED,LIMITED,Available
+Eric Reid,San Francisco 49ers,"Knee,rib",LIMITED,LIMITED,FULL,Available
+Joe Staley,San Francisco 49ers,Not Injury Related,DNP,FULL,FULL,Available
+Ahkello Witherspoon,San Francisco 49ers,Knee,LIMITED,FULL,LIMITED,Questionable
+Michael Bennett,Seattle Seahawks,Knee,DNP,DNP,FULL,Available
+Duane Brown,Seattle Seahawks,Ankle,LIMITED,DNP,FULL,Available
+Kam Chancellor,Seattle Seahawks,Neck,DNP,DNP,DNP,Out
+Justin Coleman,Seattle Seahawks,Shoulder,LIMITED,FULL,FULL,Available
+Mike Davis,Seattle Seahawks,Ribs,LIMITED,FULL,FULL,Available
+Jimmy Graham,Seattle Seahawks,Ankle,LIMITED,DNP,FULL,Available
+Luke Joeckel,Seattle Seahawks,Knee,LIMITED,LIMITED,FULL,Available
+Nazair Jones,Seattle Seahawks,Ankle,DNP,DNP,DNP,Doubtful
+Dion Jordan,Seattle Seahawks,Neck,LIMITED,FULL,FULL,Available
+Byron Maxwell,Seattle Seahawks,Shoulder,LIMITED,FULL,FULL,Available
+Ethan Pocic,Seattle Seahawks,Ankle,LIMITED,FULL,FULL,Available
+Earl Thomas,Seattle Seahawks,Heel,--,DNP,FULL,Available
+Bobby Wagner,Seattle Seahawks,Hamstring,DNP,DNP,DNP,Questionable
+K.J. Wright,Seattle Seahawks,Concussion,DNP,DNP,DNP,Doubtful
+Cameron Brate,Tampa Bay Buccaneers,Hip,LIMITED,FULL,FULL,Available
+Lavonte David,Tampa Bay Buccaneers,Hamstring,DNP,DNP,DNP,Out
+Vernon Hargreaves III,Tampa Bay Buccaneers,Hamstring,LIMITED,LIMITED,DNP,Out
+Joe Hawley,Tampa Bay Buccaneers,Illness,DNP,FULL,FULL,Available
+Gerald McCoy,Tampa Bay Buccaneers,Biceps,DNP,DNP,DNP,Out
+Clinton McDonald,Tampa Bay Buccaneers,Back,LIMITED,LIMITED,FULL,Questionable
+Josh Robinson,Tampa Bay Buccaneers,Hamstring,LIMITED,LIMITED,FULL,Questionable
+Donovan Smith,Tampa Bay Buccaneers,Shoulder,LIMITED,LIMITED,FULL,Questionable
+J.R. Sweezy,Tampa Bay Buccaneers,Shin,DNP,FULL,LIMITED,Questionable
+T.J. Ward,Tampa Bay Buccaneers,Concussion,FULL,FULL,FULL,Available
+Johnathan Cyprien,Tennessee Titans,Back,DNP,DNP,DNP,Questionable
+Taylor Lewan,Tennessee Titans,Back,DNP,FULL,FULL,Available
+Marcus Mariota,Tennessee Titans,Knee,FULL,FULL,FULL,Available
+Derrick Morgan,Tennessee Titans,Knee,LIMITED,LIMITED,DNP,Out
+Phillip Supernaw,Tennessee Titans,Ankle,DNP,DNP,LIMITED,Questionable
+Ryan Anderson,Washington Redskins,Ankle,LIMITED,LIMITED,LIMITED,Questionable
+Zach Brown,Washington Redskins,"Illness,toe, Achilles, Hip",DNP,DNP,DNP,Out
+Ryan Grant,Washington Redskins,Ankle,LIMITED,LIMITED,LIMITED,Questionable
+Maurice Harris,Washington Redskins,Concussion,LIMITED,LIMITED,LIMITED,Questionable
+Matt Ioannidis,Washington Redskins,Hand,FULL,FULL,FULL,Available
+Terrell McClain,Washington Redskins,Toe,LIMITED,LIMITED,LIMITED,Questionable
+Morgan Moses,Washington Redskins,Ankle,DNP,LIMITED,LIMITED,Questionable
+Montae Nicholson,Washington Redskins,Concussion,DNP,DNP,DNP,Out
+Josh Norman,Washington Redskins,Knee,DNP,LIMITED,FULL,Available
+Chase Roullier,Washington Redskins,Hand,LIMITED,LIMITED,LIMITED,Questionable
+Martrell Spaight,Washington Redskins,Ankle,FULL,FULL,FULL,Available
+Trent Williams,Washington Redskins,Knee,DNP,DNP,DNP,Questionable
