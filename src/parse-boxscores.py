@@ -1,8 +1,9 @@
 import os
 import re
-from bs4 import BeautifulSoup as bs, Comment
 from pprint import PrettyPrinter
 import csv
+from bs4 import BeautifulSoup as bs
+from utils import soupify_comment
 
 # directory containing raw, unprocessed HTML documents
 FILE_DIR = "../raw/boxscores"
@@ -69,20 +70,6 @@ def getweek(s):
 def getyear(s):
     '''get the year number out of a filename.'''
     return re.match(r"(\d{4})\.week\d{1,2}\..*\.htm", s).group(1)
-
-
-def soupify_comment(soup, id, el="div"):
-    '''
-    Retrieve comment from soup by id, and convert into a soup object.
-    args:
-        s (bs) - soup object to search
-        id (str) - str id to find in s
-    returns:
-        retrieved comment as a soup object
-    '''
-    wrapper = soup.find(el, {"id": id})
-    comment = wrapper.find(text=lambda txt: isinstance(txt, Comment))
-    return bs(comment, "html.parser")
 
 
 def parse_table(soup, table_id, types=[], attrs=[], pre_cols=[], cast=True,
