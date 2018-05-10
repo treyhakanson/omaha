@@ -3,30 +3,13 @@ import re
 from pprint import PrettyPrinter
 import csv
 from bs4 import BeautifulSoup as bs
-from utils import soupify_comment
+from utils import soupify_comment, build_header
+from constants import (ROUTE_TYPES, ROUTE_ATTRS, RUSH_TYPES, RUSH_ATTRS,
+                       PASS_TCKL_TYPES, TCKL_ATTRS, SNAP_COUNT_TYPES,
+                       SNAP_COUNT_ATTRS, SNAP_COUNT_PRE_COLS)
 
 # directory containing raw, unprocessed HTML documents
 FILE_DIR = "../raw/boxscores"
-
-# Route information
-ROUTE_TYPES = ["short_l", "short_mid", "short_r", "deep_l", "deep_mid",
-               "deep_r"]
-ROUTE_ATTRS = ["tgt", "ctch", "yds", "td"]
-
-# Rush information
-RUSH_TYPES = ["l_end", "l_tckl", "l_guard", "mid", "r_guard", "r_tckl",
-              "r_end"]
-RUSH_ATTRS = ["att", "yds", "td"]
-
-# Defensive information
-PASS_TCKL_TYPES = ["short_r", "short_mid", "short_l", "deep_r", "deep_mid",
-                   "deep_l"]
-TCKL_ATTRS = ["tckl", "dfnd"]
-
-# Snap count information
-SNAP_COUNT_TYPES = ["off", "def", "st"]
-SNAP_COUNT_ATTRS = ["num", "pct"]
-SNAP_COUNT_PRE_COLS = ["pos"]
 
 # Final output directory information
 ROOT_DIR = "../boxscore-data"
@@ -75,17 +58,8 @@ def getyear(s):
 def parse_table(soup, table_id, types=[], attrs=[], pre_cols=[], cast=True,
                 drop_leading=1):
     soup = soupify_comment(soup, "all_%s" % table_id)
-    header = ["player_name", "player_link"]
-    for col in pre_cols:
-        header.append(col)
-    if len(types) > 0:
-        for type in types:
-            for attr in attrs:
-                col = "%s__%s" % (type, attr)
-                header.append(col)
-    else:
-        for attr in attrs:
-            header.append(attr)
+    header = ["player_name", "player_link", *pre_cols]
+    header = build_header(types, attrs, pre_cols=header)
     res = [header]
     trs = soup.find("table", {"id": table_id}).tbody.find_all("tr")
     for tr in trs:

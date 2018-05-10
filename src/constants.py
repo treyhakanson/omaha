@@ -40,3 +40,23 @@ TEAM_NAMES = [
 
 # Path to database file
 DB_PATH = "../boxscore-data/db.sqlite"
+
+# Route information
+ROUTE_TYPES = ["short_l", "short_mid", "short_r", "deep_l", "deep_mid",
+               "deep_r"]
+ROUTE_ATTRS = ["tgt", "ctch", "yds", "td"]
+
+# Rush information
+RUSH_TYPES = ["l_end", "l_tckl", "l_guard", "mid", "r_guard", "r_tckl",
+              "r_end"]
+RUSH_ATTRS = ["att", "yds", "td"]
+
+# Defensive information
+PASS_TCKL_TYPES = ["short_r", "short_mid", "short_l", "deep_r", "deep_mid",
+                   "deep_l"]
+TCKL_ATTRS = ["tckl", "dfnd"]
+
+# Snap count information
+SNAP_COUNT_TYPES = ["off", "def", "st"]
+SNAP_COUNT_ATTRS = ["num", "pct"]
+SNAP_COUNT_PRE_COLS = ["pos"]

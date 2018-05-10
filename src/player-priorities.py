@@ -1,6 +1,55 @@
 import sqlite3
-from constants import DB_PATH
+from pprint import PrettyPrinter
+from utils import build_header
+from constants import DB_PATH, PASS_TCKL_TYPES, TCKL_ATTRS
+from matplotlib import pyplot as plt
+import seaborn as sns
 
+
+def sum_col(mat, col):
+    sum = 0
+    for row in mat:
+        sum += row[col]
+    return sum
+
+
+"""
+Determining secondary player productivity is difficult since tackles are not a
+particularly strong indicator of success. If anything, tackles by secondary
+players on non-running plays suggest someone in the secondary allowed a catch,
+so they are almost a negative indicator (excluding plays like screens, or
+catches by players covered by linebackers, with should be to tight ends
+primarily).
+
+My initial thoughts on how to cope, and implications in general:
+
+- Passes defended should be weighted highly, as those are objectively
+  "good plays" for a defender.
+- Tackles should be weighted lowly, if not negatively, for certain secondary
+  positions and situations
+- It may be useful to incorporate a ratio of quantity of actions performed to
+  snap count for certain secondary players. For example, if a cornerback is on
+  the field for a high volumne of snaps and performs no actions, than the
+  players they were covering we likely no targeted. Either that, or they
+  consitently gave up touchdowns. This information should be verifiable based
+  on receiver performance
+- Based on the above, the ideal defense would have corners with a small action
+  quantity to snap count ratio, and linebackers/linemen with the bulk of the
+  tackles (may or may not be true).
+
+Things to keep in mind/concerns:
+
+- If a receiver makes a catch/back rushed and runs out of bounds, how is this
+  recorded? Can check to see if its recorded as a tackle by seeing if
+  `(run_tckls + pass_tckls) - (rushes + receptions) + TDs` is negative
+"""
+
+TCKL_WEIGHT = 1.0  # weight of tackles made
+DFND_WEIGHT = 2.0  # weight of passes defended
+QUAN_WEIGHT = 1.1  # weight of quantity of actions
+# TODO: get per-game snap counts
+
+pp = PrettyPrinter()
 conn = sqlite3.connect(DB_PATH)
 c = conn.cursor()
 c.execute("""
@@ -8,13 +57,14 @@ c.execute("""
         FROM player
 """)
 player_links = list(map(lambda x: x[0], c.fetchall()))
-for pl in player_links:
-    c.execute("""
-        SELECT *
-            FROM pass_tckl
-            WHERE player_link = ?
-    """, [pl])
-    res = c.fetchall()
-    if len(res) > 0:
-        print(res)
-        break
+header = build_header(PASS_TCKL_TYPES, TCKL_ATTRS)
+header_str = ', '.join(list(map(lambda x: "SUM(%s) %s" % (x, x), header)))
+c.execute("""
+    SELECT %s
+        FROM pass_tckl
+        GROUP BY player_link
+""" % header_str)
+res = c.fetchall()
+sns.heatmap(res)
+plt.show()
+# pp.pprint(res)

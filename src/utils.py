@@ -24,3 +24,16 @@ def soupify_comment(soup, id, el="div"):
     wrapper = soup.find(el, {"id": id})
     comment = wrapper.find(text=lambda txt: isinstance(txt, Comment))
     return bs(comment, "html.parser")
+
+
+def build_header(types, attrs, pre_cols=[]):
+    header = [*pre_cols]
+    if len(types) > 0:
+        for type in types:
+            for attr in attrs:
+                col = "%s__%s" % (type, attr)
+                header.append(col)
+    else:
+        for attr in attrs:
+            header.append(attr)
+    return header

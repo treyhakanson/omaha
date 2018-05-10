@@ -10,6 +10,21 @@ Repository to project and visualize player performance based on historical data.
 * `injuries` contains injury week by week injury
 * `boxscore-data/db.sqlite` a sqlite3 format of all the repository's CSV data
 
+## Basic Setup
+
+Before cloning, create and activate a virtual environment using `venv`, **NOT** `virtualenv`, to ensure plotting libraries function properly:
+
+```sh
+python -m venv omaha-env       # create virtual environment
+source omaha-env/bin/activate  # activate virtual environment
+```
+
+Then, clone the repository inside `omaha-env` and install the required dependencies:
+
+```sh
+pip install -r requirements.txt  # from ./omaha-env/omaha
+```
+
 ## Retrieval and Processing
 
 This section pertains to retrieval and processing of the data. All data come with the repository and will be periodically updated, but in the case that additional data is desired/required the pipeline is as follows:
