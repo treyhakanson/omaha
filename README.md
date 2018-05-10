@@ -27,6 +27,11 @@ pip install -r requirements.txt  # from ./omaha-env/omaha
 
 ## Retrieval and Processing
 
+In addition to the python requirements, the following are also needed:
+
+* [bash](https://www.gnu.org/software/bash/) for executing scripts
+* [curl](https://curl.haxx.se/) for requesting data
+
 This section pertains to retrieval and processing of the data. All data come with the repository and will be periodically updated, but in the case that additional data is desired/required the pipeline is as follows:
 
 To retrieve, parse, and process boxscore data:
