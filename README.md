@@ -35,7 +35,7 @@ And for players (requires processed boxscore data):
 ```sh
 python3 get-player-links.py  # retrieve unique player links from snap counts
 bash get-players.sh          # retrieves raw player pages
-python3 parse-players.py    # parse/post-process player pages (combine data)
+python3 parse-players.py     # parse/post-process player pages (combine data)
 ```
 
 To populate the sqlite3 database with the CSV data:

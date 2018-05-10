@@ -37,3 +37,6 @@ TEAM_NAMES = [
   "Tennessee Titans",
   "Washington Redskins"
 ]
+
+# Path to database file
+DB_PATH = "../boxscore-data/db.sqlite"

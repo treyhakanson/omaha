@@ -1,8 +1,8 @@
 import os
 import csv
 import sqlite3
+from constants import DB_PATH
 
-DB_PATH = "../boxscore-data/db.sqlite"
 TABLE_CONFIG = {
     "penalty": {
         "dir": "../boxscore-data/penalties",
@@ -85,9 +85,9 @@ TABLE_CONFIG = {
 conn = sqlite3.connect(DB_PATH)
 c = conn.cursor()
 c.execute("""
-SELECT 'DROP TABLE ' || name || ';'
-    FROM sqlite_master
-    WHERE type = 'table';
+    SELECT 'DROP TABLE ' || name || ';'
+        FROM sqlite_master
+        WHERE type = 'table';
 """)
 for drop_statement in list(map(lambda x: x[0], c.fetchall())):
     conn.execute(drop_statement)
