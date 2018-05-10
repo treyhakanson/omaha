@@ -15,7 +15,7 @@ Repository to project and visualize player performance based on historical data.
 Before cloning, create and activate a virtual environment using `venv`, **NOT** `virtualenv`, to ensure plotting libraries function properly:
 
 ```sh
-python -m venv omaha-env       # create virtual environment
+python3 -m venv omaha-env       # create virtual environment
 source omaha-env/bin/activate  # activate virtual environment
 ```
 
