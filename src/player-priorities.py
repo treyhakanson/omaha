@@ -2,16 +2,6 @@ import sqlite3
 from pprint import PrettyPrinter
 from utils import build_header
 from constants import DB_PATH, PASS_TCKL_TYPES, TCKL_ATTRS
-from matplotlib import pyplot as plt
-import seaborn as sns
-
-
-def sum_col(mat, col):
-    sum = 0
-    for row in mat:
-        sum += row[col]
-    return sum
-
 
 """
 Determining secondary player productivity is difficult since tackles are not a
@@ -47,9 +37,8 @@ Things to keep in mind/concerns:
 TCKL_WEIGHT = 1.0  # weight of tackles made
 DFND_WEIGHT = 2.0  # weight of passes defended
 QUAN_WEIGHT = 1.1  # weight of quantity of actions
-# TODO: get per-game snap counts
 
-pp = PrettyPrinter()
+pp = PrettyPrinter(width=100)
 conn = sqlite3.connect(DB_PATH)
 c = conn.cursor()
 c.execute("""
@@ -60,11 +49,13 @@ player_links = list(map(lambda x: x[0], c.fetchall()))
 header = build_header(PASS_TCKL_TYPES, TCKL_ATTRS)
 header_str = ', '.join(list(map(lambda x: "SUM(%s) %s" % (x, x), header)))
 c.execute("""
-    SELECT %s
-        FROM pass_tckl
-        GROUP BY player_link
+    SELECT pt.player_name, sc.pos, sc.team_name, pt.game, SUM(def__num), %s
+        FROM pass_tckl pt
+            JOIN snap_count sc ON
+                pt.player_link = sc.player_link AND
+                pt.game = sc.game
+        GROUP BY pt.player_link
+    ORDER BY sc.pos, sc.team_name
 """ % header_str)
 res = c.fetchall()
-sns.heatmap(res)
-plt.show()
-# pp.pprint(res)
+pp.pprint(res)
