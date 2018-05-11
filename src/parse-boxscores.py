@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup as bs
 from utils import soupify_comment, build_header
 from constants import (ROUTE_TYPES, ROUTE_ATTRS, RUSH_TYPES, RUSH_ATTRS,
                        PASS_TCKL_TYPES, TCKL_ATTRS, SNAP_COUNT_TYPES,
-                       SNAP_COUNT_ATTRS, SNAP_COUNT_PRE_COLS)
+                       SNAP_COUNT_ATTRS, SNAP_COUNT_PRE_COLS, PASS_GEN_TYPES)
 
 # directory containing raw, unprocessed HTML documents
 FILE_DIR = "../raw/boxscores"
@@ -14,6 +14,7 @@ FILE_DIR = "../raw/boxscores"
 # Final output directory information
 ROOT_DIR = "../boxscore-data"
 OUTPUT_DIRS = [
+    "pass_gen",
     "tgt_dirs",
     "rush_dirs",
     "pass_tckls",
@@ -25,13 +26,14 @@ OUTPUT_DIRS = [
 
 # Pipline information; set to false to ignore
 PIPELINE = {
-    "TGT_DIRS": True,
-    "RUSH_DIRS": True,
-    "PASS_TCKLS": True,
-    "RUSH_TCKLS": True,
-    "SNAP_COUNTS": True,
-    "ZEBRAS": True,
-    "PENALTIES": True,
+    "PASS_GEN": True,
+    "TGT_DIRS": False,
+    "RUSH_DIRS": False,
+    "PASS_TCKLS": False,
+    "RUSH_TCKLS": False,
+    "SNAP_COUNTS": False,
+    "ZEBRAS": False,
+    "PENALTIES": False,
 }
 # if true, will only attempt to process 1 boxscore
 DEV_MODE = False
@@ -40,9 +42,8 @@ OUTPUT = True
 # if the file has already been parsed, skip it
 SKIP_EXISTING = True  # TODO: actually implement this
 
-
 pp = PrettyPrinter(compact=True)
-output_map = {}
+out = {}
 
 
 def getweek(s):
@@ -59,7 +60,7 @@ def parse_table(soup, table_id, types=[], attrs=[], pre_cols=[], cast=True,
                 drop_leading=1):
     soup = soupify_comment(soup, "all_%s" % table_id)
     header = ["player_name", "player_link", *pre_cols]
-    header = build_header(type=types, attrs=attrs, pre_cols=header)
+    header = build_header(types=types, attrs=attrs, pre_cols=header)
     res = [header]
     trs = soup.find("table", {"id": table_id}).tbody.find_all("tr")
     for tr in trs:
@@ -137,6 +138,11 @@ def parse_snap_counts(soup, home_team, away_team):
     return [header, *home_sc, *away_sc]
 
 
+def rm_non_passers(x):
+    """Remove players with 0 pass attempts"""
+    return x[3] is not 0
+
+
 fnames = os.listdir(FILE_DIR)
 fnames.sort(key=getweek)
 
@@ -147,29 +153,29 @@ for fname in fnames:
     week = getweek(fname)
     year = getyear(fname)
     print("Processing %s week %s, %s..." % (year, week, game))
+    if PIPELINE["PASS_GEN"]:
+        out["pass_gen"] = parse_table(soup, "player_offense",
+                                      attrs=PASS_GEN_TYPES)
+        out["pass_gen"] = list(filter(rm_non_passers, out["pass_gen"]))
     if PIPELINE["TGT_DIRS"]:
-        output_map["tgt_dirs"] = parse_table(soup, "targets_directions",
-                                             types=ROUTE_TYPES,
-                                             attrs=ROUTE_ATTRS)
+        out["tgt_dirs"] = parse_table(soup, "targets_directions",
+                                      types=ROUTE_TYPES, attrs=ROUTE_ATTRS)
     if PIPELINE["RUSH_DIRS"]:
-        output_map["rush_dirs"] = parse_table(soup, "rush_directions",
-                                              types=RUSH_TYPES,
-                                              attrs=RUSH_ATTRS)
+        out["rush_dirs"] = parse_table(soup, "rush_directions",
+                                       types=RUSH_TYPES, attrs=RUSH_ATTRS)
     if PIPELINE["PASS_TCKLS"]:
-        output_map["pass_tckls"] = parse_table(soup, "pass_tackles",
-                                               types=PASS_TCKL_TYPES,
-                                               attrs=TCKL_ATTRS)
+        out["pass_tckls"] = parse_table(soup, "pass_tackles",
+                                        types=PASS_TCKL_TYPES,
+                                        attrs=TCKL_ATTRS)
     if PIPELINE["RUSH_TCKLS"]:
-        output_map["rush_tckls"] = parse_table(soup, "rush_tackles",
-                                               attrs=RUSH_TYPES)
+        out["rush_tckls"] = parse_table(soup, "rush_tackles", attrs=RUSH_TYPES)
     if PIPELINE["SNAP_COUNTS"]:
         away_team, home_team = game.split(" at ")
-        output_map["snap_counts"] = parse_snap_counts(soup, home_team,
-                                                      away_team)
+        out["snap_counts"] = parse_snap_counts(soup, home_team, away_team)
     if PIPELINE["ZEBRAS"]:
-        output_map["zebras"] = parse_zebras(soup, game)
+        out["zebras"] = parse_zebras(soup, game)
     if PIPELINE["PENALTIES"]:
-        output_map["penalties"] = parse_penalties(soup)
+        out["penalties"] = parse_penalties(soup)
     res_base_fname = game.replace(" at ", "@").replace(" ", "_")
     res_fname = "%s.week%s.%s.csv" % (year, week, res_base_fname)
     for output_dir in OUTPUT_DIRS:
@@ -179,7 +185,7 @@ for fname in fnames:
             continue
         with open("%s/%s/%s" % (ROOT_DIR, output_dir, res_fname), "w") as file:
             writer = csv.writer(file)
-            for row in output_map[output_dir]:
+            for row in out[output_dir]:
                 writer.writerow(row)
     if DEV_MODE:
         break

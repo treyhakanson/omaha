@@ -1,3 +1,15 @@
+CREATE TABLE pass_gen (
+   player_name TEXT,
+   player_link TEXT,
+   game TEXT,
+   cmp INT,
+   att INT,
+   yds INT,
+   td INT,
+   _int INT,
+   sk INT
+);
+
 CREATE TABLE rush_dir (
    player_name TEXT,
    player_link TEXT,

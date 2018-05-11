@@ -20,6 +20,14 @@ TABLE_CONFIG = {
         """,
         "mutation": lambda row, fname: row
     },
+    "pass_gen": {
+        "dir": "../boxscore-data/pass_gen",
+        "query": """
+            INSERT INTO pass_gen
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """,
+        "mutation": lambda row, fname: [*row[0:2], fname, *row[2:]]
+    },
     "pass_tckl": {
         "dir": "../boxscore-data/pass_tckls",
         "query": """
@@ -82,6 +90,16 @@ TABLE_CONFIG = {
     }
 }
 
+
+def upload_data(query, file_dir, mutation):
+    for fname in os.listdir(file_dir):
+        with open("%s/%s" % (file_dir, fname), "r") as file:
+            reader = csv.reader(file)
+            next(reader, None)
+            data = [mutation(row, fname) for row in reader]
+            conn.executemany(query, data)
+
+
 conn = sqlite3.connect(DB_PATH)
 c = conn.cursor()
 c.execute("""
@@ -94,16 +112,6 @@ for drop_statement in list(map(lambda x: x[0], c.fetchall())):
 with open("./create_db.sql", "r") as file:
     for create_statement in file.read().split('\n\n'):
         conn.execute(create_statement)
-
-
-def upload_data(query, file_dir, mutation):
-    for fname in os.listdir(file_dir):
-        with open("%s/%s" % (file_dir, fname), "r") as file:
-            reader = csv.reader(file)
-            next(reader, None)
-            data = [mutation(row, fname) for row in reader]
-            conn.executemany(query, data)
-
 
 for tn in TABLE_CONFIG.keys():
     print("Uploading data for %s..." % tn)

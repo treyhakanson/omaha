@@ -39,6 +39,9 @@ TEAM_NAMES = ["Arizona Cardinals",
 # Path to database file
 DB_PATH = "../db.sqlite"
 
+# Passing information
+PASS_GEN_TYPES = ["cmp", "att", "yds", "td", "int", "sk"]
+
 # Route information
 ROUTE_TYPES = ["short_l",
                "short_mid",
