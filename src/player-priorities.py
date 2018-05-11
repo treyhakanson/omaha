@@ -2,9 +2,10 @@ import sqlite3
 from functools import reduce
 from pprint import PrettyPrinter
 import csv
-from utils import build_header
+from utils import build_header, log_query
 from constants import (DB_PATH, PASS_TCKL_TYPES, RUSH_TYPES, TCKL_ATTRS,
-                       DEF_POS)
+                       DEF_POS, SEC_POS, BACK_POS, REC_POS, ALL_POS,
+                       ROUTE_TYPES)
 
 """
 Determining secondary player productivity is difficult since tackles are not a
@@ -45,6 +46,7 @@ QUAN_WEIGHT = 1.1  # Weight of quantity of actions
 
 # Minimum number of snaps for a player to be considered (defense)
 SNAP_THRESH__DEF = 16
+SNAP_THRESH__OFF = 16
 
 # Pipeline information
 PIPELINE = {
@@ -55,10 +57,6 @@ PIPELINE = {
     "REC_OFF": True
 }
 
-pp = PrettyPrinter(width=100)
-conn = sqlite3.connect(DB_PATH)
-c = conn.cursor()
-
 
 def weight_priorities(data, i, j):
     res = [*data[i:j]]
@@ -67,15 +65,33 @@ def weight_priorities(data, i, j):
     return res
 
 
-def defensive_priorities(table_name, types=[], attrs=[], pos=[], fname=[]):
-    header = build_header(types=types, attrs=attrs)
-    header_str = ", ".join(map(lambda x: "SUM(%s) %s" % (x, x), header))
-    sub_str = ",".join("?" * len(pos))
-    c.execute("""
+def build_priorities(cursor, table_name, cols, pos=ALL_POS,
+                     fname="./priorities.csv", defense=True, log_only=False):
+    """
+    Generates a CSV containing player priorities based on the given values. The
+    Table given will be joined with the snap_count table, and thus the given
+    table must have `game` and `player_link` columns. Resultant data will be
+    prefixed with the following columns: `player_name`, `pos`, `team_name`, and
+    `snap_count` (total number of snaps taken on the year)
+
+    Params:
+    cursor (cursor) - the database cursor to execute the query on.
+    table_name (str) - the name of the table to build priorities for
+    header (arrayOf(str)) - the columns to consider for building priorities
+    pos (arrayOf(str)) - the positions to consider from the table
+    fname (str) - the name of the file to output to
+    defense (bool) - whether or not the prioritization is for defensive players
+    log_only (bool) - if true, will simply output the query rather than execute
+    """
+    header_str = ",".join(map(lambda x: "SUM(%s) %s" % (x, x), cols))
+    sub = ",".join("?" * len(pos))
+    side = "def__num" if defense else "off__num"
+    THRESH = SNAP_THRESH__DEF if defense else SNAP_THRESH__OFF
+    query = """
         SELECT t.player_name,
                sc.pos,
                sc.team_name,
-               SUM(def__num) def__num,
+               SUM(%s) snap_num,
                %s -- dynamically created column names based on types/attrs
             FROM %s t
                 JOIN snap_count sc ON
@@ -83,28 +99,57 @@ def defensive_priorities(table_name, types=[], attrs=[], pos=[], fname=[]):
                     t.game = sc.game
             WHERE sc.pos IN (%s)
             GROUP BY t.player_link
-            HAVING def__num > ?
+            HAVING %s > ? -- TODO: change this from minimum snap count to
+                          -- minimum attempts (for offense)
         ORDER BY sc.team_name, sc.pos
-    """ % (header_str, table_name, sub_str), [*pos, SNAP_THRESH__DEF])
-    res = c.fetchall()
+    """ % (side, header_str, table_name, sub, side)
+    query_args = [*pos, THRESH]
+    if log_only:
+        log_query(cursor, query, query_args)
+        return
+    cursor.execute(query, query_args)
+    res = cursor.fetchall()
     with open(fname, "w") as file:
         writer = csv.writer(file)
+        writer.writerow(["player_name", "pos", "team_name", "snap_num", *cols])
         for player in res:
             player = list(player)
-            player[5:] = weight_priorities(player, 4, len(res))
+            player[4:] = weight_priorities(player, 4, len(res))
             writer.writerow(player)
 
 
+pp = PrettyPrinter(width=100)
+conn = sqlite3.connect(DB_PATH)
+c = conn.cursor()
+
 if PIPELINE["PASS_DEF"]:
     print("Processing pass defense priorities...")
-    fname = "%s/pass_defense.csv" % FILE_DIR
-    defensive_priorities("pass_tckl", types=PASS_TCKL_TYPES, attrs=TCKL_ATTRS,
-                         pos=DEF_POS, fname=fname)
+    fname = "%s/pass_def.csv" % FILE_DIR
+    cols = build_header(types=PASS_TCKL_TYPES, attrs=TCKL_ATTRS)
+    build_priorities(c, "pass_tckl", cols, pos=SEC_POS, fname=fname)
 
 if PIPELINE["RUSH_DEF"]:
     print("Processing rush defense priorities...")
-    fname = "%s/rush_defense.csv" % FILE_DIR
-    defensive_priorities("rush_tckl", attrs=RUSH_TYPES, pos=DEF_POS,
-                         fname=fname)
+    fname = "%s/rush_def.csv" % FILE_DIR
+    cols = build_header(attrs=RUSH_TYPES)
+    build_priorities(c, "rush_tckl", cols, pos=DEF_POS, fname=fname)
+
+if PIPELINE["RUSH_OFF"]:
+    print("Processing rushing offense priorities...")
+    fname = "%s/rush_off.csv" % FILE_DIR
+    cols = build_header(types=RUSH_TYPES, attrs=["att"])
+    pos = [*BACK_POS, "WR"]
+    build_priorities(c, "rush_dir", cols, pos=pos, fname=fname, defense=False)
+
+if PIPELINE["REC_OFF"]:
+    print("Processing receiving offense priorities...")
+    fname = "%s/rec_off.csv" % FILE_DIR
+    cols = build_header(types=ROUTE_TYPES, attrs=["tgt"])
+    pos = [*BACK_POS, *REC_POS]
+    build_priorities(c, "tgt_dir", cols, pos=pos, fname=fname, defense=False)
+
+if PIPELINE["PASS_OFF"]:
+    print("Processing passing offense priorities...")
+    # TODO: complete body
 
 print("Done.")

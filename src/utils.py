@@ -37,3 +37,12 @@ def build_header(types=[], attrs=[], pre_cols=[]):
         for attr in attrs:
             header.append(attr)
     return header
+
+
+def log_query(cursor, query, args):
+    if len(args) > 0:
+        cursor.execute("SELECT " + ", ".join(["quote(?)" for i in args]), args)
+        quoted_values = cursor.fetchone()
+        for quoted_value in quoted_values:
+            query = query.replace('?', str(quoted_value), 1)
+    print(query)

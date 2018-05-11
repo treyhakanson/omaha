@@ -88,3 +88,6 @@ BACK_POS = ["RB", "FB"]  # Halfbacks (primary rushers)
 # offensive and defensive positions will also appear on special teams)
 ST_POS = ["K", "P", "LS"]
 KICK_POS = "K"  # Kicker
+
+# All positions
+ALL_POS = [*DEF_POS, *OFF_POS, *ST_POS]
