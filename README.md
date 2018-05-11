@@ -6,9 +6,15 @@ Repository to project and visualize player performance based on historical data.
 
 ## Available Data
 
+**Basic Data:**
+
 * `boxscore-data` contains parsed components of boxscore data in CSV format
-* `injuries` contains injury week by week injury
 * `boxscore-data/db.sqlite` a sqlite3 format of all the repository's CSV data
+* `injuries` contains week by week injury data
+
+**Advanced Metrics:**
+
+* `priorities` defines players priorities by what actions they perform weighted against the total number of actions they perform. For example, this data would show that over _n_ snaps, running back _X_ runs off the left tackle 60% of the time.
 
 ## Basic Setup
 
@@ -25,7 +31,11 @@ Then, clone the repository inside `omaha-env` and install the required dependenc
 pip install -r requirements.txt  # from ./omaha-env/omaha
 ```
 
-## Retrieval and Processing
+## Running the Pipeline
+
+All of the data built by the pipeline is provided in the repository. However, if you want to make tweaks to the structure and or build out new analytical models, you may need to run some or all of the pipeline. The following sections detail how to run the various components.
+
+### Retrieval and Processing
 
 In addition to the python requirements, the following are also needed:
 
@@ -65,3 +75,13 @@ python3 populate-db.py  # requires all of above data to populate db
 ```
 
 Note that the tables in the database may have some additional columns to aid in joining tables. For example, some tables feature a game column so that offensive and defensive players from the same game can be compared.
+
+### Advanced Data Generation
+
+With all the raw data retrieved and processed, the more advanced data sets that will ultimately be used to build the analytical models can be generated.
+
+To generate player priorities:
+
+```sh
+python3 player-priorities.py
+```
