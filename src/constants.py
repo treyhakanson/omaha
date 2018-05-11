@@ -37,7 +37,7 @@ TEAM_NAMES = ["Arizona Cardinals",
               "Washington Redskins"]
 
 # Path to database file
-DB_PATH = "../boxscore-data/db.sqlite"
+DB_PATH = "../db.sqlite"
 
 # Route information
 ROUTE_TYPES = ["short_l",

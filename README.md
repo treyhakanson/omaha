@@ -9,12 +9,15 @@ Repository to project and visualize player performance based on historical data.
 **Basic Data:**
 
 * `boxscore-data` contains parsed components of boxscore data in CSV format
-* `boxscore-data/db.sqlite` a sqlite3 format of all the repository's CSV data
 * `injuries` contains week by week injury data
 
 **Advanced Metrics:**
 
 * `priorities` defines players priorities by what actions they perform weighted against the total number of actions they perform. For example, this data would show that over _n_ snaps, running back _X_ runs off the left tackle 60% of the time.
+
+**Miscellaneous:**
+
+* `db.sqlite` relevant pieces of the repositories data in a sqlite3 database 
 
 ## Basic Setup
 
