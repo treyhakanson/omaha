@@ -26,7 +26,7 @@ def soupify_comment(soup, id, el="div"):
     return bs(comment, "html.parser")
 
 
-def build_header(types, attrs, pre_cols=[]):
+def build_header(types=[], attrs=[], pre_cols=[]):
     header = [*pre_cols]
     if len(types) > 0:
         for type in types:

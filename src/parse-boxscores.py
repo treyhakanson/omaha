@@ -59,7 +59,7 @@ def parse_table(soup, table_id, types=[], attrs=[], pre_cols=[], cast=True,
                 drop_leading=1):
     soup = soupify_comment(soup, "all_%s" % table_id)
     header = ["player_name", "player_link", *pre_cols]
-    header = build_header(types, attrs, pre_cols=header)
+    header = build_header(type=types, attrs=attrs, pre_cols=header)
     res = [header]
     trs = soup.find("table", {"id": table_id}).tbody.find_all("tr")
     for tr in trs:
