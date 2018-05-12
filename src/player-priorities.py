@@ -50,11 +50,11 @@ SNAP_THRESH__OFF = 16
 
 # Pipeline information
 PIPELINE = {
-    "PASS_DEF": True,
-    "RUSH_DEF": True,
-    "RUSH_OFF": True,
+    "PASS_DEF": False,
+    "RUSH_DEF": False,
+    "RUSH_OFF": False,
     "PASS_OFF": True,
-    "REC_OFF": True
+    "REC_OFF": False
 }
 
 
@@ -149,7 +149,41 @@ if PIPELINE["REC_OFF"]:
     build_priorities(c, "tgt_dir", cols, pos=pos, fname=fname, defense=False)
 
 if PIPELINE["PASS_OFF"]:
+    """
+    NOTE: pass offense is a different query, because pass offense priorities
+    are treated as an attribute of the entire offense, not necessarily a
+    specific quarterback. Quarterback efficacy will be paired with this data to
+    help determine overall efficacy of an aerial attack.
+
+    Note that this may not be a great assumption. When quarterbacks get
+    injured, the play book often changes to better suit that quarterback. May
+    make more sense to change this to a per-player basis. Also, this data may
+    not prove particularly useful due to coaching turnover, which always causes
+    big changes to playbooks. May make the most sense to attach frequencies to
+    coaching regimes.
+    """
     print("Processing passing offense priorities...")
-    # TODO: complete body
+    fname = "%s/pass_off.csv" % FILE_DIR
+    cols = build_header(types=ROUTE_TYPES, attrs=["tgt"])
+    header_str = ",".join(map(lambda x: "SUM(%s) %s" % (x, x), cols))
+    pos = [*BACK_POS, *REC_POS]
+    c.execute("""
+        SELECT sc.team_name,
+           %s
+        FROM tgt_dir td
+            JOIN snap_count sc ON
+                td.player_link = sc.player_link AND
+                td.game = sc.game
+        WHERE sc.pos IN (%s)
+                    GROUP BY sc.team_name
+    """ % (header_str, ",".join("?" * len(pos))), pos)
+    res = c.fetchall()
+    with open(fname, "w") as file:
+        writer = csv.writer(file)
+        writer.writerow(["team_name", *cols])
+        for team in res:
+            team = list(team)
+            team[1:] = weight_priorities(team, 1, len(res))
+            writer.writerow(team)
 
 print("Done.")
