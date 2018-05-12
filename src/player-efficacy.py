@@ -3,8 +3,10 @@ import os
 import pickle
 from pprint import PrettyPrinter
 from constants import (TEAM_NAMES, DB_PATH, RUSH_TYPES)
+from utils import avg_cols
 
-PICKLE_DIR = "../efficacies/pickles"
+PICKLE_DIR = "../efficacies/pickles"  # directory to store pickled dictionaries
+REPICKLE = False                      # override existing pickles
 
 conn = sqlite3.connect(DB_PATH)
 c = conn.cursor()
@@ -12,7 +14,7 @@ pp = PrettyPrinter(width=100)
 
 # build rush defense averages (average yards yielded per attempt, by type)
 rush_def_avgs_fname = "%s/rush_def_avgs.pkl" % PICKLE_DIR
-if os.path.exists(rush_def_avgs_fname):
+if os.path.exists(rush_def_avgs_fname) and not REPICKLE:
     with open(rush_def_avgs_fname, "rb") as file:
         rush_def_avgs = pickle.load(file)
 else:
@@ -20,7 +22,7 @@ else:
     col_in_tmpl = "SUM(%s__yds) / SUM(%s__att) %s__per_att"
     col_out = ",".join([col_out_tmpl % (typ, typ) for typ in RUSH_TYPES])
     col_in = ",".join([col_in_tmpl % (typ, typ, typ) for typ in RUSH_TYPES])
-    rush_def_avgs = {}
+    rush_def_avgs = {"league_avg": []}
     for team in TEAM_NAMES:
         c.execute("""
             SELECT %s
@@ -35,8 +37,10 @@ else:
                            sc.team_name NOT LIKE ?
                 )
         """ % (col_out, col_in), ["%%%s%%" % team.replace(" ", "_"), team])
-        res = c.fetchall()
+        res = list(c.fetchone())
         rush_def_avgs[team] = res
+        rush_def_avgs["league_avg"].append(res)
+    rush_def_avgs["league_avg"] = avg_cols(rush_def_avgs["league_avg"])
     with open(rush_def_avgs_fname, "wb") as file:
         pickle.dump(rush_def_avgs, file)
 

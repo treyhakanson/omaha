@@ -1,4 +1,5 @@
 import re
+from functools import reduce
 from bs4 import BeautifulSoup as bs, Comment
 
 
@@ -46,3 +47,15 @@ def log_query(cursor, query, args):
         for quoted_value in quoted_values:
             query = query.replace('?', str(quoted_value), 1)
     print(query)
+
+
+def avg_cols(mat):
+    res = []
+    rows = len(mat)
+    cols = len(mat[0])
+    for j in range(cols):
+        sum = 0
+        for i in range(rows):
+            sum += mat[i][j]
+        res.append(sum / rows)
+    return res

@@ -17,25 +17,30 @@ primarily).
 
 My initial thoughts on how to cope, and implications in general:
 
-- Passes defended should be weighted highly, as those are objectively
+* Passes defended should be weighted highly, as those are objectively
   "good plays" for a defender.
-- Tackles should be weighted lowly, if not negatively, for certain secondary
+* Tackles should be weighted lowly, if not negatively, for certain secondary
   positions and situations
-- It may be useful to incorporate a ratio of quantity of actions performed to
+* It may be useful to incorporate a ratio of quantity of actions performed to
   snap count for certain secondary players. For example, if a cornerback is on
   the field for a high volumne of snaps and performs no actions, than the
   players they were covering we likely no targeted. Either that, or they
   consitently gave up touchdowns. This information should be verifiable based
   on receiver performance
-- Based on the above, the ideal defense would have corners with a small action
+* Based on the above, the ideal defense would have corners with a small action
   quantity to snap count ratio, and linebackers/linemen with the bulk of the
   tackles (may or may not be true).
 
 Things to keep in mind/concerns:
 
-- If a receiver makes a catch/back rushed and runs out of bounds, how is this
+* If a receiver makes a catch/back rushed and runs out of bounds, how is this
   recorded? Can check to see if its recorded as a tackle by seeing if
   `(run_tckls + pass_tckls) - (rushes + receptions) + TDs` is negative
+
+Potential optimizations:
+
+* Weight later games heavier than earlier games
+* Throw out later games if players are rested
 """
 
 FILE_DIR = "../priorities"  # output directory
