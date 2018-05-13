@@ -1,5 +1,4 @@
 import re
-from functools import reduce
 from bs4 import BeautifulSoup as bs, Comment
 
 
