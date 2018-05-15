@@ -39,7 +39,7 @@ with open("%s/rush_def_avgs_partial.pkl" % EFF_PKL_DIR, "rb") as file:
     typ = os.sys.argv[1]
     wk_str = os.sys.argv[2]
     if len(os.sys.argv) >= 4:
-        team_names = [os.sys.argv[3]]
+        team_names = [*os.sys.argv[3:]]
     else:
         team_names = TEAM_NAMES
     idx = TYPES.index(typ)
@@ -59,10 +59,13 @@ with open("%s/rush_def_avgs_partial.pkl" % EFF_PKL_DIR, "rb") as file:
             y, x = subgroup(wk_data, 2)[idx]
             c = TEAM_COLORS[team].primary
             ec = TEAM_COLORS[team].secondary
-            p = plt.scatter(x, y, c=c, edgecolors=ec, linewidth=1, label=team)
+            label = "(Week %d)\n%s" % (wk + 1, team)
+            p = plt.scatter(x, y, c=c, edgecolors=ec, linewidth=1, label=label)
             pts.append(p)
     plt.xlabel("Attempts")
     plt.ylabel("Yards")
-    plt.title("Yards per %s Attempt by Team (Week %s)" % (typ, wk_str))
+    team_str = ", ".join(team_names) if len(team_names) <= 3 else "Team"
+    typ = typ.upper()
+    plt.title("Yards per %s Attempt by %s (Week %s)" % (typ, team_str, wk_str))
     mplcursors.cursor(hover=True).connect("add", configure_popup)
     plt.show()
