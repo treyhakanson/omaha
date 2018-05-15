@@ -112,3 +112,9 @@ To generate player priorities:
 ```sh
 python3 player-priorities.py
 ```
+
+Tp generate defensive efficacies (rushing and passing):
+
+```sh
+python3 defense-efficacy.py
+```
