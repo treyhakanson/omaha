@@ -4,7 +4,7 @@ import pickle
 from pprint import PrettyPrinter
 from constants import (TEAM_NAMES, DB_PATH, RUSH_TYPES, ROUTE_TYPES,
                        EFF_PKL_DIR)
-from utils import avg_cols
+from utils import avg_cols, getweek
 
 REPICKLE = True  # override existing pickles
 
@@ -55,17 +55,29 @@ def execute_partial_def_query(cursor, table_name, col):
     for team in TEAM_NAMES:
         query_args = ["%%%s%%" % team.replace(" ", "_"), team]
         c.execute("""
-            SELECT %s
-            FROM %s t
-                JOIN snap_count sc ON
-                    t.player_link = sc.player_link AND
-                    t.game = sc.game
-            GROUP BY t.game, sc.team_name
-            HAVING t.game LIKE ? AND
-                   sc.team_name NOT LIKE ?
+            SELECT t.game, %s
+                FROM %s t
+                    JOIN snap_count sc ON
+                        t.player_link = sc.player_link AND
+                        t.game = sc.game
+                GROUP BY t.game, sc.team_name
+                HAVING t.game LIKE ? AND
+                       sc.team_name NOT LIKE ?
         """ % (col, table_name), query_args)
         res = list(c.fetchall())
-        def_avgs[team] = res
+        res.sort(key=lambda x: getweek(x[0], game=True))
+        # fill bye week with none
+        prev_wk = getweek(res[0][0], game=True)
+        if prev_wk is 2:
+            res = [None, *res]
+        else:
+            for i in range(1, len(res)):
+                wk = getweek(res[i][0], game=True)
+                if wk - prev_wk is not 1:
+                    res = [*res[0:prev_wk], None, *res[prev_wk:]]
+                    break
+                prev_wk = wk
+        def_avgs[team] = list(map(lambda x: x if x is None else x[1:], res))
     def_avgs["header"] = [desc[0] for desc in cursor.description]
     return def_avgs
 

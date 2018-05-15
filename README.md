@@ -17,7 +17,7 @@ Repository to project and visualize player performance based on historical data.
 
 **Miscellaneous:**
 
-* `db.sqlite` relevant pieces of the repositories data in a sqlite3 database 
+* `db.sqlite` relevant pieces of the repositories data in a sqlite3 database
 
 ## Basic Setup
 
@@ -33,6 +33,30 @@ Then, clone the repository inside `omaha-env` and install the required dependenc
 ```sh
 pip install -r requirements.txt  # from ./omaha-env/omaha
 ```
+
+## Visualizations
+
+Visualizations are available for various pieces of the data, using simple command line interfaces.
+
+### Defensive Efficacy
+
+To visualize defensive efficacy (currently only for rush defense), use the `visualize-defense-efficacies.py` script:
+
+```sh
+python3 visualize-defense-efficacies.py <rush_dir> <game(s)> <team_name?>
+```
+
+* `rush_dir` matches one of the `RUSH_TYPES` in `constants.py` (l_end, l_tckl, etc.)
+* `game(s)` is a range of weeks, or a single week
+* `team_name` is the name of a specific team, matching one of the `TEAM_NAMES` in `constants.py`, to analyze (optional).
+
+For example, the following command will show the rush yardage yielded by the Seattle Seahawks defense in weeks 1-12:
+
+```sh
+python3 visualize-defense-efficacies.py l_tckl 1-12 "Seattle Seahawks"
+```
+
+![Seattle Seahawks Rush Defense Visualization](./images/rush-data-viz-ss.png)
 
 ## Running the Pipeline
 
