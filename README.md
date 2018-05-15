@@ -25,7 +25,7 @@ Before cloning, create and activate a virtual environment using `venv`, **NOT** 
 
 ```sh
 python3 -m venv omaha-env       # create virtual environment
-source omaha-env/bin/activate  # activate virtual environment
+source omaha-env/bin/activate   # activate virtual environment
 ```
 
 Then, clone the repository inside `omaha-env` and install the required dependencies:
