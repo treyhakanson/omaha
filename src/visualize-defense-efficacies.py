@@ -102,7 +102,6 @@ args = parser.parse_args()
 file = open("%s/rush_def_avgs_partial.pkl" % EFF_PKL_DIR, "rb")
 rdap = pickle.load(file)
 file.close()
-print(args.wks)
 if args.wks is not None:
     plot_wks(rdap, args.wks[0], args.ctgy[0], args.teams)
 else:
