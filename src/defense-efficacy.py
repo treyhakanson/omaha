@@ -42,7 +42,7 @@ def execute_full_def_query(cursor, table_name, col_out, col_in):
         def_avgs[team] = res
         def_avgs["league_avg"].append(res)
     def_avgs["league_avg"] = avg_cols(def_avgs["league_avg"])
-    def_avgs["header"] = [desc[0] for desc in cursor.description]
+    def_avgs["header"] = [desc[0] for desc in cursor.description[1:]]
     return def_avgs
 
 
@@ -78,7 +78,7 @@ def execute_partial_def_query(cursor, table_name, col):
                     break
                 prev_wk = wk
         def_avgs[team] = list(map(lambda x: x if x is None else x[1:], res))
-    def_avgs["header"] = [desc[0] for desc in cursor.description]
+    def_avgs["header"] = [desc[0] for desc in cursor.description[1:]]
     return def_avgs
 
 
